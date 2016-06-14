@@ -1,0 +1,25 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "MASU Leadership Summit 2016",
+      "appId": "ls.masu.project",
+      "ionicCss": false,
+      "bowerPackages": [
+        "angular-dynamic-locale#~0.1.27",
+        "angular-translate#~2.11.0",
+        "angular-translate-loader-static-files#~2.11.0",
+        "localforage#~1.4.0"
+      ],
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-splashscreen"
+      ],
+      "appModule": "masuLeadershipSummit2016",
+      "ecosystems": []
+    }
+  }
+}
