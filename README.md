@@ -12,7 +12,5 @@ This project was generated with Generator-M-Ionic v1.8.0. For more info visit th
 
 Development:
 
-[![Dev Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][coveralls-url]
-[![Dev Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][travis-url]
-[![Dev Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic/dev)
-
+[![Dev Build Status](https://img.shields.io/travis/brh55/masu-app/dev.svg?style=flat-square)][travis-url]
+[![Dev Dependency Status](http://img.shields.io/david/brh55/masu-app/dev.svg?style=flat-square)](https://david-dm.org/brh55/masu-app/dev)
