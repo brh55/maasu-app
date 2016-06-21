@@ -1,0 +1,7 @@
+// Home.scss
+.home {
+    &__tiles {
+        float: left;
+        width: calc(50% - 20px);
+    }
+}

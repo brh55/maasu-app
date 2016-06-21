@@ -1,0 +1,10 @@
+// Useful Utility Classes
+.width {
+    // control width by 5%
+    @for $i from 1 through 20 {
+        $width-i: $i * 5;
+        &--#{$width-i} {
+            width: $width-i + %;
+        }
+    }
+}
