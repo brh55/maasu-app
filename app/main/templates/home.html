@@ -1,17 +1,71 @@
-<ion-view view-title="MASU Leadership Summit 2016">
+<ion-view view-title="Home">
   <ion-content>
 
     <!-- content goes here -->
     <ion-list>
-      <ion-item
-        class="item-remove-animate item-avatar item-icon-right"
-        type="item-text-wrap"
-        ui-sref="main.listDetail">
-        <img src="main/assets/images/yo@2x.png">
-        <h2>Mr. Yo</h2>
-        <p>Learn more...</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-      </ion-item>
+      <div class="list card home__tiles width--10" ui-sref="main.agenda">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>Agenda</h2>
+        </div>
+      </div>
+
+      <div class="list card home__tiles" ui-sref="main.map">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>Map</h2>
+        </div>
+      </div>
+
+      <div class="list card home__tiles" ui-sref="main.workshop">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>Workshop</h2>
+        </div>
+      </div>
+
+      <div class="list card home__tiles" ui-sref="main.speakers">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>Speakers</h2>
+        </div>
+      </div>
+
+      <div class="list card home__tiles" ui-sref="main.sponsors">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>Sponsors</h2>
+        </div>
+      </div>
+
+      <div class="list card home__tiles" ui-sref="main.attendees">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>Attendees</h2>
+        </div>
+      </div>
+
+      <div class="list card home__tiles" ui-sref="main.about">
+        <div class="item item-image">
+          <img src="cover.jpg">
+        </div>
+        <div class="item">
+          <h2>About</h2>
+        </div>
+      </div>
+
     </ion-list>
 
   </ion-content>
