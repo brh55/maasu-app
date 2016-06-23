@@ -4,11 +4,13 @@
 .menu {
     .item {
         border: none;
+        color: $space-grey;
+        letter-spacing: 1px;
     }
 
     .item-icon-left {
-        .item-complex .item-content {
-            padding: 30px 16px 30px 65px;
+        &.item-complex .item-content {
+            padding: 18px 18px 18px 65px;
         }
 
         .icon-map {
@@ -40,9 +42,27 @@
         color: $nu-purple;
     }
 
-    &__social-links {
+    &__divider-wrapper {
+        @extend .center-block;
+        width: 80%;
+    }
+
+    .menu__divider {
+        height: 1px;
+        border-radius: 4px;
+        margin: 10px 0;
+        background-color: $inactive-grey;
+    }
+
+    .social-links {
         float: right;
         padding: 10px 16px;
-        font-size: 24px;
+        font-size: 25px;
+
+
+        a {
+            text-decoration: none;
+            margin-right: 15px
+        }
     }
 }
