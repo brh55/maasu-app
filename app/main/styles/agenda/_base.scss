@@ -1,1 +1,14 @@
 // base for Agenda
+
+.agenda {
+    @for $length from 1 through 10 {
+        $bar-length: $length * 5%;
+
+        &__time-bar--#{$length} {
+            @extend .center-block;
+            height: $bar-length;
+            width: 1px;
+            background: $nu-purple;
+        }
+    }
+}
