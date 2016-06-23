@@ -6,6 +6,13 @@
         border: none;
         color: $space-grey;
         letter-spacing: 1px;
+
+        .item-content.activated {
+            color: $royal;
+            border: none;
+            background-color: $hover-purple;
+            transition: all .4s ease;
+        }
     }
 
     .item-icon-left {
