@@ -1,0 +1,21 @@
+<ion-view view-title="Workshops">
+  <ion-content>
+
+    <!-- content goes here -->
+    <ion-list>
+      <div class="list">
+          <span ng-repeat="workshop in workshop.entries">
+            <a class="item item-avatar" ui-sref="#">
+              <img src="venkman.jpg">
+              <h2>{{ workshop.fields.title }}</h2>
+              <span class="author">{{ workshop.fields.author }}</span> |
+              <span ng-repeat="tag in workshop.fields.genre">{{ tag }}<span ng-if="!$last">, </span></span>
+              <p>{{ workshop.fields.description }}</p>
+              <span class="workshop__timeslot">{{ workshop.fields.tiemslot }}</span>
+            </a>
+          </span>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -2,13 +2,64 @@
 
 .agenda {
     @for $length from 1 through 10 {
-        $bar-length: $length * 5%;
+        $bar-length: $length * 5px;
 
         &__time-bar--#{$length} {
-            @extend .center-block;
             height: $bar-length;
             width: 1px;
+            border-radius: 3px;
+            margin: 3px 0 3px 15px;
+            display: block;
             background: $nu-purple;
         }
+    }
+
+    h2 {
+        margin-left: -10px;
+    }
+
+    .item {
+        h4 {
+            font-weight: 300;
+            letter-spacing: .09em;
+            font-size: 14px;
+        }
+
+        h5 {
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+    }
+
+    .list {
+        margin-top: 10px;
+        width: 90%
+    }
+
+    &__section--2 {
+        margin-top: 25px;
+    }
+
+    .item {
+        width: calc(100% - 17px);
+    }
+
+    &__number,
+    &__day {
+        display: block;
+    }
+
+    &__day {
+        font-size: 17px;
+        color: $purple-grey;
+    }
+
+    &__number {
+        font-size: 45px;
+    }
+
+    &__date {
+        text-align: center;
     }
 }

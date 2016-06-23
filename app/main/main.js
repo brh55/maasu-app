@@ -3,10 +3,14 @@ angular.module('main', [
   'ionic',
   'ngCordova',
   'ui.router',
+  'contentful'
   // TODO: load other modules selected during generation
 ])
-.config(function ($stateProvider, $urlRouterProvider) {
-
+.config(function ($stateProvider, $urlRouterProvider, contentfulProvider) {
+  contentfulProvider.setOptions({
+    space: 'fsxwgabotp2c',
+    accessToken: '7d9bcb591d105c142ae6cb874e9913e27cc84e5c7f027b6e24d2d210d1385841'
+  });
   // ROUTING with ui.router
   $urlRouterProvider.otherwise('/main/');
   $stateProvider
@@ -57,6 +61,15 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/agenda/main.html'
+          }
+        }
+      })
+      .state('main.workshop', {
+        url: '/workshop',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/workshop/main.html',
+            controller: 'workshopCtrl as workshop'
           }
         }
       })
