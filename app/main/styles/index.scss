@@ -1,9 +1,12 @@
-// index.scss
+// index to control import order of styles
+@import 'base/index';
+
 // Index and order of style sheets
-
 @import 'home/index';
+@import 'agenda/index';
 
-
+// Import all components post views
+@import 'components/index';
 
 // Utils Last to Override other Styles
 @import 'utils/index';

@@ -5,7 +5,7 @@
 
     <!-- header bar -->
     <!-- the nav bar will be updated as we navigate between views -->
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-royal">
       <!-- back button, shown if applicable -->
       <ion-nav-back-button>
       </ion-nav-back-button>
@@ -22,49 +22,60 @@
   </ion-side-menu-content>
 
   <!-- SIDEMENU -->
-  <ion-side-menu side="left">
+  <ion-side-menu class="menu" side="left">
 
     <!-- menu header -->
-    <ion-header-bar class="bar-positive">
-      <h1 class="title">Nav</h1>
+    <ion-header-bar class="item-icon-left">
+      <a menu-close>
+        <i class="menu__close-btn icon ion-ios-close-empty"></i>
+      </a>
     </ion-header-bar>
 
     <!-- menu content -->
-    <ion-content>
+    <ion-content scroll="false">
+      <div class="menu__title text-center">
+        <h2>MAASU</h2>
+        <p><span class="menu__subtitle-divider">@</span></p>
+        <p><span class="menu__subtitle">Northwestern</span></p>
+      </div>
       <ion-list>
-        <ion-item menu-close ui-sref="main.home">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.home">
+          <i class="icon ion-ios-home-outline"></i>
           Home
         </ion-item>
-        <ion-item menu-close ui-sref="main.comittee">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.comittee">
+          <i class="icon ion-ios-people-outline"></i>
           Comittee
         </ion-item>
-        <ion-item menu-close ui-sref="main.comittee">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.comittee">
+          <i class="icon ion-ios-time-outline"></i>
           Agenda
         </ion-item>
-        <ion-item menu-close ui-sref="main.workshop">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.workshop">
+          <i class="icon ion-ios-lightbulb-outline"></i>
           Workshops
         </ion-item>
-        <ion-item menu-close ui-sref="main.map">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.map">
+          <i class="icon icon-map"></i>
           Map
         </ion-item>
-        <ion-item menu-close ui-sref="main.speakers">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.speakers">
+          <i class="icon ion-ios-mic-outline"></i>
           Keynote Speakers
         </ion-item>
-        <ion-item menu-close ui-sref="main.sponsors">
+        <ion-item class="item-icon-left" menu-close ui-sref="main.sponsors">
+          <i class="icon ion-ios-color-wand-outline"></i>
           Sponsors
         </ion-item>
-        <div class="menu__social-links">
-          <h4>Connect</h4>
-          <a href="http://facebook.com">
-            Facebook
-          </a>
-          <a href="http://masu.org">
-            MASU
-          </a>
-        </div>
-
-        </ion-item>
       </ion-list>
+      <div class="menu__social-links">
+        <a href="http://facebook.com">
+          <i class="icon ion-social-facebook-outline"></i>
+        </a>
+        <a href="http://maasu.org/">
+          <i class="icon ion-ios-world-outline"></i>
+        </a>
+      </div>
     </ion-content>
 
   </ion-side-menu>

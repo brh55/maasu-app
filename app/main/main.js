@@ -8,16 +8,8 @@ angular.module('main', [
 .config(function ($stateProvider, $urlRouterProvider) {
 
   // ROUTING with ui.router
-  $urlRouterProvider.otherwise('/main/list');
+  $urlRouterProvider.otherwise('/main/');
   $stateProvider
-    .state('main.home', {
-      url: '/',
-      views: {
-        'pageContent': {
-          templateUrl: 'main/templates/home.html'
-        }
-      }
-    })
     // this state is placed in the <ion-nav-view> in the index.html
     .state('main', {
       url: '/main',
@@ -25,6 +17,14 @@ angular.module('main', [
       templateUrl: 'main/templates/menu.html',
       controller: 'MenuCtrl as menu'
     })
+      .state('main.home', {
+        url: '/',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/home.html'
+          }
+        }
+      })
       .state('main.list', {
         url: '/list',
         views: {
@@ -49,6 +49,14 @@ angular.module('main', [
           'pageContent': {
             templateUrl: 'main/templates/debug.html',
             controller: 'DebugCtrl as ctrl'
+          }
+        }
+      })
+      .state('main.agenda', {
+        url: '/agenda',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/agenda/main.html'
           }
         }
       })
