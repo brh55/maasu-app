@@ -45,7 +45,7 @@ gulp.task('watch', ['inject-all'], function () {
   var watchFiles = paths.jsFiles
     .concat([
       'app/index.html',
-      '.tmp/*/styles/*.css', // each module's css
+      //'.tmp/*/styles/*.css', // each module's css
       'app/*/assets/**/*'
     ])
     .concat(paths.templates);
@@ -64,7 +64,7 @@ gulp.task('watch', ['inject-all'], function () {
     }
   });
   // watch for changes in scss
-  gulp.watch('app/*/styles/**/*.scss', ['styles']);
+  gulp.watch(['app/*/styles/**/*.scss', '!app/*/styles/**/_index.scss'], ['styles']);
   // watch for changes in environment files and new config files
   gulp.watch([
     'app/main/constants/env-*.json',
