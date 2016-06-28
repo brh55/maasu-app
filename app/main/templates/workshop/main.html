@@ -26,8 +26,14 @@
             <a class="item item-avatar" ui-sref="main.workshopDetail({id: workshop.sys.id})">
               <img ng-src="{{ workshop.fields.authorImage[0].fields.file.url }}">
               <h2>{{ workshop.fields.title }}</h2>
-              <span class="workshop__author">{{ workshop.fields.author }}</span> |
-              <span class="workshop__genre">{{ workshop.fields.genre }}</span>
+              <span class="workshop__meta-info">
+                <span class="workshop__author">{{ workshop.fields.author }}</span>
+                <span class="workshop__meta-pipe">|</span>
+                <span class="workshop__genre">{{ workshop.fields.genre }}</span>
+                <br>
+                <i class="icon ion-ios-clock-outline workshop__icon-clock"></i>
+                <span class="workshop__timeslot">{{ workshop.fields.timeslot | timeParse }}</span>
+              </span>
             </a>
           </span>
       </div>

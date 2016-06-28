@@ -5,11 +5,14 @@
         top: calc(44px + 48px);
     }
 
-    &__genre,
-    &__author {
+    &__meta-info {
         text-transform: capitalize;
         font-size: 13px;
         color: $space-grey;
+
+        span:not(:last-child) {
+            margin-right: 4px;
+        }
     }
 
     &__time {
@@ -19,6 +22,10 @@
             margin-right: 10px;
             font-size: 16px;
         }
+    }
+
+    &__icon-clock {
+        margin-right: 5px;
     }
 
     &__time-slot {
