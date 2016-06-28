@@ -1,0 +1,40 @@
+// base of workshop
+
+.workshop {
+    &__content {
+        top: calc(44px + 48px);
+    }
+
+    &__genre,
+    &__author {
+        text-transform: capitalize;
+        font-size: 13px;
+        color: $space-grey;
+    }
+
+    &__time {
+        margin-bottom: 5px;
+
+        .icon {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+    }
+
+    &__time-slot {
+        color: $space-grey;
+        font-weight: 500;
+        font-size: 16px;
+        display: block;
+        padding: 10px 0;
+        letter-spacing: 1px;
+    }
+
+    &__time-dash {
+        height: 1px;
+        background: $inactive-grey;
+        flex-grow: 1;
+        margin-left: 20px;
+        border-radius: 4px;
+    }
+}

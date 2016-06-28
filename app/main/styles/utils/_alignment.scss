@@ -16,3 +16,9 @@
 .row-wrap {
     row-wrap: wrap;
 }
+
+.flex {
+    &-vertical--center {
+        align-items: center;
+    }
+}

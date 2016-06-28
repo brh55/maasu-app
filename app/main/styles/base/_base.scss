@@ -1,0 +1,101 @@
+// base
+
+.base {
+    &__image--circle {
+        border-radius: 100%;
+    }
+}
+
+.view {
+    &__heading {
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        letter-spacing: 0.02em;
+        position: relative;
+        border-bottom: 1px solid #d6d6d6;
+    }
+
+    &__heading-title {
+        padding: 80px 15px 12px 15px;
+        position: absolute;
+        bottom: 0;
+
+        h1 {
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.27);
+        }
+    }
+
+    &__divider {
+        width: 45%;
+        height: 1px;
+        display: block;
+        background: $inactive-grey;
+        margin: 20px auto;
+    }
+
+    &__heading-tags {
+        font-size: 14px;
+        color: $nu-purple;
+        padding: 11px 0;
+
+        span {
+            border: 2px solid white;
+            border-radius: 5px;
+            background: #fff;
+            padding: 7px;
+            text-transform: uppercase;
+            letter-spacing: .10em;
+            font-weight: 500;
+
+            &:not(:last-child) {
+                margin-right: 14px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 17px;
+
+        p {
+            font-size: 16px;
+            color: $text-grey;
+            line-height: 2;
+            letter-spacing: 0.03em;
+        }
+    }
+
+    &__content-author {
+        img {
+            height: 100%;
+            width: 100%;
+            max-height: 150px;
+            max-width: 150px;
+        }
+    }
+
+    .content__author-desc {
+        color: $purple-grey;
+        line-height: 1.4;
+        font-size: 14px;
+    }
+
+    .author__info {
+        padding-left: 20px;
+
+        h4 {
+            margin-top: 0;
+            font-size: 20px;
+            color: $royal;
+        }
+    }
+}
+
+.tabs-top {
+    border: none;
+}
