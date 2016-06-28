@@ -1,21 +1,36 @@
 <ion-view view-title="Workshops">
-  <ion-content>
-
+  <div class="tabs-striped tabs-top tabs-background-royal tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'all'}" ng-click="workshop.filterShops('all')">
+      All
+      </a>
+      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'politics'}"" ng-click="workshop.filterShops('politics')">
+      Politics
+      </a>
+      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'activism'}" ng-click="workshop.filterShops('activism')">
+      Activism
+      </a>
+      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'career'}" ng-click="workshop.filterShops('career')">
+      Career
+      </a>
+      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'culture'}" ng-click="workshop.filterShops('culture')">
+      Culture
+      </a>
+    </div>
+  </div>
+  <ion-content class="workshop__content">
     <!-- content goes here -->
     <ion-list>
       <div class="list">
-          <span ng-repeat="workshop in workshop.entries">
-            <a class="item item-avatar" ui-sref="#">
-              <img src="venkman.jpg">
+          <span ng-repeat="workshop in workshop.currentEntries">
+            <a class="item item-avatar" ui-sref="main.workshopDetail({id: workshop.sys.id})">
+              <img ng-src="{{ workshop.fields.authorImage[0].fields.file.url }}">
               <h2>{{ workshop.fields.title }}</h2>
-              <span class="author">{{ workshop.fields.author }}</span> |
-              <span ng-repeat="tag in workshop.fields.genre">{{ tag }}<span ng-if="!$last">, </span></span>
-              <p>{{ workshop.fields.description }}</p>
-              <span class="workshop__timeslot">{{ workshop.fields.tiemslot }}</span>
+              <span class="workshop__author">{{ workshop.fields.author }}</span> |
+              <span class="workshop__genre">{{ workshop.fields.genre }}</span>
             </a>
           </span>
       </div>
     </ion-list>
-
   </ion-content>
 </ion-view>

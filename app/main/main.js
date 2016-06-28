@@ -66,6 +66,9 @@ angular.module('main', [
       })
       .state('main.workshop', {
         url: '/workshop',
+        params: {
+          genre: null
+        },
         views: {
           'pageContent': {
             templateUrl: 'main/templates/workshop/main.html',
@@ -73,21 +76,12 @@ angular.module('main', [
           }
         }
       })
-      // Speakers
-      // Speaker 1
-      .state('main.speakers.1', {
-        url: '/speakers/1',
+      .state('main.workshopDetail', {
+        url: '/workshop/:id',
         views: {
           'pageContent': {
-            templateUrl: 'main/templates/speakers/speaker1.html'
-          }
-        }
-      })
-      .state('main.speakers.2', {
-        url: '/speakers/2',
-        views: {
-          'pageContent': {
-            templateUrl: 'main/templates/speakers/speaker2.html'
+            templateUrl: 'main/templates/workshop/detail.html',
+            controller: 'workshopDetailCtrl as workshop'
           }
         }
       });

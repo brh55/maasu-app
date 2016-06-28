@@ -1,0 +1,34 @@
+<ion-view view-title="{{ workshop.detail.title }}">
+  <!-- do you want padding -->
+  <ion-content>
+    <div class="view__heading" style="background-image: url('https://images.unsplash.com/photo-1465143192652-61c44e8449bd?dpr=1&auto=format&crop=entropy&fit=crop&w=400&h=300&q=80');">
+        <div class="view__heading-title">
+            <h1>{{ workshop.detail.title }}</h1>
+            <div class="view__heading-tags">
+                <span ng-repeat="tag in workshop.detail.genre">{{ tag }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="view__content">
+        <div class="row flex-vertical--center no-padding workshop__time">
+            <i class="icon ion-ios-clock-outline"></i>
+            <span class="workshop__time-slot">{{ workshop.detail.timeParse }}</span>
+            <span class="workshop__time-dash"></span>
+        </div>
+        <p>{{ workshop.detail.description }}</p>
+
+        <div class="view__divider"></div>
+
+        <div class="view__content-author row">
+            <div class="col-20">
+                <img class="base__image--circle float-left" ng-src="{{ workshop.detail.authorImage[0].fields.file.url }}" alt="">
+            </div>
+            <div class="col-80 author__info">
+                <h4 class="content__author-name">{{ workshop.detail.author }}</h4>
+                <p class="content__author-desc">{{ workshop.detail.authorShortDesc }}</p>
+            </div>
+        </div>
+    </div>
+    <!-- content goes here -->
+  </ion-content>
+</ion-view>
