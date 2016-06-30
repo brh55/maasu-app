@@ -46,7 +46,7 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/committee/main.html',
-            // controller: '<someCtrl> as ctrl'
+            controller: 'committeeCtrl as committee'
           }
         }
       })
