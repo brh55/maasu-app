@@ -1,0 +1,18 @@
+.map {
+    &__item {
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    &__open-link {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        &.item-content.activated {
+            background-color: rgba(224, 224, 224, 0.52);
+        }
+    }
+}

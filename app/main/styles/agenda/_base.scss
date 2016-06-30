@@ -62,4 +62,9 @@
     &__date {
         text-align: center;
     }
+
+    &__divider {
+        background: $hover-purple;
+        color: $nu-purple;
+    }
 }

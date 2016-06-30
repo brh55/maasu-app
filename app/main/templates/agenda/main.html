@@ -1,81 +1,28 @@
 <!-- Main view of Agenda template -->
 <ion-view view-title="Agenda">
-  <ion-content class="agenda padding">
-
-    <h1 class="title">Agenda.</h1>
-
+  <ion-content>
     <div class="agenda__section--1">
-        <div class="row">
-            <div class="col-20 agenda__date">
-                <h2>
-                    <span class="agenda__number">11</span>
-                    <span class="agenda__day">FRI</span>
-                </h2>
-            </div>
-            <div class="col-90 no-padding">
-                <div class="list list-inset">
-                    <div class="item">
-                        <h5 class="agenda__time">8:30 PM - 9:30 PM</h5>
-                        <h4>Early Registration</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="list">
+        <!-- Start of Friday Agenda -->
+        <div class="item agenda__divider item-divider">Friday, Nov 11</div>
 
-    <div class="agenda__section--2">
-        <div class="row">
-            <div class="col-20 agenda__date">
-                <h2>
-                    <span class="agenda__number">12</span>
-                    <span class="agenda__day">SAT</span>
-                </h2>
-            </div>
-            <div class="col-90">
-                <div class="list list-inset">
-                    <div class="item">
-                        <h5 class="agenda__time">8:30 AM - 9:30 AM</h5>
-                        <h4>Late Registration</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">9:30 AM - 10:30 AM</h5>
-                        <h4>Opening Ceremony</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">10:30 AM - 10:50 AM</h5>
-                        <h4>Small Group Session 1</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">11:00 AM - 11:50 AM</h5>
-                        <h4>Workshop Session 1</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">12:00 PM - 12:50 PM</h5>
-                        <h4>Workshop Session 2</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">1:00 PM - 2:15 PM</h5>
-                        <h4>Lunch</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">2:15 PM - 2:30 PM</h5>
-                        <h4>Small Group Session 2</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">2:40 PM - 3:30 PM</h5>
-                        <h4>Workshop Session 3</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">6:30 PM</h5>
-                        <h4>Banquet Doors Open</h4>
-                    </div>
-                    <div class="item">
-                        <h5 class="agenda__time">7:00 PM - 9:30 PM</h5>
-                        <h4>Dinner/Keynote/Closing Remarks</h4>
-                    </div>
-                </div>
-            </div>
+        <div ng-repeat="event in agenda.friday" class="item">
+          {{ event.fields.name }}
+          <span class="item-note">
+            {{ event.fields.startTime }} - {{ event.fields.endTime }}
+          </span>
         </div>
-    </div>
+
+        <!-- Start of Saturday Agenda -->
+        <div class="item agenda__divider item-divider">Saturday, Nov 12</div>
+
+        <div ng-repeat="event in agenda.saturday" class="item">
+          {{ event.fields.name }}
+          <span class="item-note">
+            {{ event.fields.startTime }}<span ng-if="event.fields.endTime"> - {{ event.fields.endTime }}</span>
+          </span>
+        </div>
+
+      </div>
   </ion-content>
 </ion-view>

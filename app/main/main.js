@@ -3,7 +3,8 @@ angular.module('main', [
   'ionic',
   'ngCordova',
   'ui.router',
-  'contentful'
+  'contentful',
+  'ionic-zoom-view',
   // TODO: load other modules selected during generation
 ])
 .config(function ($stateProvider, $urlRouterProvider, contentfulProvider) {
@@ -38,15 +39,38 @@ angular.module('main', [
           }
         }
       })
-      .state('main.listDetail', {
-        url: '/list/detail',
+
+      // COMMITTEE ROUTE
+      .state('main.committee', {
+        url: '/committee',
         views: {
           'pageContent': {
-            templateUrl: 'main/templates/list-detail.html',
+            templateUrl: 'main/templates/committee/main.html',
             // controller: '<someCtrl> as ctrl'
           }
         }
       })
+
+      // MAP ROUTE
+      .state('main.maps', {
+        url: '/maps',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/maps/main.html',
+            controller: 'MapsCtrl as maps'
+          }
+        }
+      })
+      .state('main.mapDetail', {
+        url: '/maps/:id',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/maps/detail.html',
+            controller: 'MapsDetailCtrl as map'
+          }
+        }
+      })
+
       .state('main.debug', {
         url: '/debug',
         views: {
@@ -56,11 +80,14 @@ angular.module('main', [
           }
         }
       })
+
+      // AGENDA ROUTE
       .state('main.agenda', {
         url: '/agenda',
         views: {
           'pageContent': {
-            templateUrl: 'main/templates/agenda/main.html'
+            templateUrl: 'main/templates/agenda/main.html',
+            controller: 'AgendaCtrl as agenda'
           }
         }
       })
