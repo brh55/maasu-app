@@ -1,5 +1,9 @@
 // base
 
+ion-content {
+    background: #faf8f8;
+}
+
 .base {
     &__image--circle {
         border-radius: 100%;
@@ -96,8 +100,18 @@
     }
 }
 
-.tabs-top {
-    border: none;
+.tabs {
+    &-top {
+        border: none;
+    }
+
+    &-striped.tabs-color-light {
+        .tab-item.active,
+        .tab-item.activated {
+            color: $teal;
+            border-bottom: 5px solid $teal !important;
+        }
+    }
 }
 
 .item {
@@ -112,4 +126,8 @@
         height: calc(100%; + 32px);
         display: block;
     }
+}
+
+.scroll-content {
+    font-weight: bold
 }

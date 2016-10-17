@@ -1,0 +1,21 @@
+// Cards
+
+.card {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    padding: 15px 28px;
+    border-radius: 5px;
+
+    &__heading {
+        text-transform: uppercase;
+        color: #6b6666;
+        font-size: 16px;
+        margin-top: 0;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #737373;
+    }
+}

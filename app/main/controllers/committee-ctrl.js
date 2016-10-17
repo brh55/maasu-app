@@ -4,12 +4,12 @@ angular.module('main')
   var searchParams = 'content_type=committee&include=2';
 
   var vm = this;
-  vm.data = [];
+  vm.list = [];
 
   contentful
     .entries(searchParams)
     .then(function (response) {
-      vm.data = response.data;
-      console.log(vm.data);
+      vm.list = response.data.items[0].fields.committeeList;
+      console.log(vm.list);
     });
 });

@@ -3,4 +3,45 @@
     &__tiles {
         color: #fff;
     }
+
+    &__intro {
+        background: url('../assets/images/bg.jpg');
+        background-size: cover;
+        min-height: 350px;
+        position: relative;
+    }
+
+    &__intro-overlay {
+        height: 100%;
+        position: absolute;
+    }
+
+    h1 {
+        color: white;
+        font-size: 60px;
+        line-height: 1;
+        font-weight: 100;
+        padding: 25px;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+
+    .text-wrapper {
+        position: absolute;
+        width: 100%;
+        bottom: 40px;
+        text-align: center;
+    }
+
+    &__image {
+        width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
+
+    &__card-wrapper {
+        margin-top: -60px;
+        z-index: 1;
+        position: relative;
+    }
 }

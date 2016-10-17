@@ -50,5 +50,8 @@
     "wiredep": "^4.0.0",
     "xml2js": "^0.4.9",
     "yeoman-test": "^1.1.0"
+  },
+  "dependencies": {
+    "moment": "^2.15.1"
   }
 }

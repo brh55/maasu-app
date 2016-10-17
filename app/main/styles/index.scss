@@ -3,12 +3,14 @@
 
 @import 'utils/index';
 @import 'base/index';
+@import 'base/typography';
 
 // Index and order of style sheets
 @import 'home/index';
 @import 'agenda/index';
 @import 'workshop/index';
 @import 'maps/index';
+@import 'committee/index';
 
 // Import all components post views
 @import 'components/index';

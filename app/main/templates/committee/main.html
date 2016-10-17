@@ -1,12 +1,13 @@
 <ion-view view-title="Committee">
   <!-- do you want padding -->
   <ion-content>
-    <div class="list">
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>Venkman</h2>
-          <p>Back off, man. I'm a scientist.</p>
-        </a>
+    <div class="card" ng-repeat="member in committee.list">
+      <div class="item item-avatar">
+        <img ng-src="{{ member.fields.image.fields.file.url }}" ng-alt="{{ member.fields.image.fields.description }}">
+        <h2>{{ member.fields.position }}</h2>
+        <h3>{{ member.fields.name }}</h3>
+        <p>{{ member.fields.description }}.</p>
+      </div>
     </div>
   </ion-content>
 </ion-view>

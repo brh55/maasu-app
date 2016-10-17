@@ -28,12 +28,13 @@ angular.module('main')
     vm.currentEntries = filterGenre(vm.entries, vm.currentGenre);
   };
 
-  vm.timeParse = function (timeString) { return TimeService.parse(timeString)};
+  vm.timeParse = function (timeString) { return TimeService.parse(timeString) };
 
   contentful
     .entries(searchParams)
     .then(function (response) {
       vm.entries = response.data.items;
       vm.currentEntries = filterGenre(vm.entries, vm.currentGenre);
+      console.log(vm.entries);
     });
 });

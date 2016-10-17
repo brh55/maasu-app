@@ -1,0 +1,10 @@
+// _base.scss
+
+.committee {
+    &__profile-image {
+        @extend .base__image--circle;
+        max-width: 150px;
+        display: block;
+        margin: 15px auto;
+    }
+}

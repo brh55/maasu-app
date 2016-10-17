@@ -26,7 +26,8 @@ angular.module('main', [
         url: '/',
         views: {
           'pageContent': {
-            templateUrl: 'main/templates/home.html'
+            templateUrl: 'main/templates/home.html',
+            controller: 'HomeCtrl as home'
           }
         }
       })
@@ -46,7 +47,7 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/committee/main.html',
-            controller: 'committeeCtrl as committee'
+            controller: 'CommitteeCtrl as committee'
           }
         }
       })

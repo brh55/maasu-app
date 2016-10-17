@@ -1,7 +1,11 @@
-// Menu Component
-
 // Adjust sizing of font-size
 .menu {
+    border-right: 1px solid whitesmoke;
+
+    &__base {
+        background: white;
+    }
+
     .item {
         border: none;
         color: $space-grey;
@@ -61,6 +65,10 @@
         background-color: $inactive-grey;
     }
 
+    &-content {
+        box-shadow: none;
+    }
+
     .social-links {
         float: right;
         padding: 10px 16px;
@@ -73,3 +81,13 @@
         }
     }
 }
+
+$grayBarText: #acb2bf;
+
+.bar-white,
+.button-clear,
+.button-clear.button-clear {
+    color: $grayBarText;
+}
+
+
