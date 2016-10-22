@@ -100,7 +100,7 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/workshop/main.html',
-            controller: 'workshopCtrl as workshop'
+            controller: 'WorkshopCtrl as workshop'
           }
         }
       })
@@ -109,7 +109,16 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/workshop/detail.html',
-            controller: 'workshopDetailCtrl as workshop'
+            controller: 'WorkshopDetailCtrl as workshop'
+          }
+        }
+      })
+      .state('main.speakers', {
+        url: '/speakers',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/speakers/main.html',
+            controller: 'SpeakersCtrl as speakers'
           }
         }
       });

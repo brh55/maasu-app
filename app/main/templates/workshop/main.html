@@ -1,45 +1,45 @@
 <ion-view view-title="Workshops">
-  <div class="tabs-striped tabs-top tabs-background-royal tabs-color-light">
-    <div class="tabs">
-      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'all'}" ng-click="workshop.filterShops('all')">
-      All
-      </a>
-      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'public service'}"" ng-click="workshop.filterShops('public service')">
-      Public Service
-      </a>
-      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'activism'}" ng-click="workshop.filterShops('activism')">
-      Activism
-      </a>
-      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'career'}" ng-click="workshop.filterShops('career')">
-      Career
-      </a>
-      <a class="tab-item" ng-class="{active: workshop.currentGenre === 'culture'}" ng-click="workshop.filterShops('culture')">
-      Culture
-      </a>
-    </div>
-  </div>
-  <ion-content class="workshop__content">
-    <!-- content goes here -->
-    <ion-list>
-      <div class="list">
-          <span ng-repeat="workshop in workshop.currentEntries">
-            <a class="item item-avatar" ui-sref="main.workshopDetail({id: workshop.sys.id})">
-              <i ng-if="workshop.fields.genre === 'career'" class="workshop__icon ion-briefcase" aria-hidden="true"></i>
-              <i ng-if="workshop.fields.genre === 'public service'" class="workshop__icon ion-ribbon-b" aria-hidden="true"></i>
-              <i ng-if="workshop.fields.genre === 'culture'" class="workshop__icon ion-earth" aria-hidden="true"></i>
-              <i ng-if="workshop.fields.genre === 'activism'" class="workshop__icon ion-speakerphone" aria-hidden="true"></i>
-              <h2>{{ workshop.fields.title }}</h2>
-              <span class="workshop__meta-info">
-                <span class="workshop__author">{{ workshop.fields.author }}</span>
-                <span class="workshop__meta-pipe">|</span>
-                <span class="workshop__genre">{{ workshop.fields.genre }}</span>
-                <br>
-                <i class="icon ion-ios-clock-outline workshop__icon-clock"></i>
-                <span class="workshop__timeslot">{{ workshop.fields.timeslot | timeParse }}</span>
-              </span>
-            </a>
-          </span>
+  <ion-content class="workshop">
+    <div class="workshop__intro">
+      <div class="workshop__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>Workshops</b><br>
+            </h1>
+            <p>All about learning</p>
+        </div>
       </div>
-    </ion-list>
+    </div>
+    <div class="tabs-striped tabs-top tabs-background-royal tabs-color-light">
+      <div class="tabs">
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'all'}" ng-click="workshop.filterShops('all')">
+        All
+        </a>
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'activism'}" ng-click="workshop.filterShops('activism')">
+        Activism
+        </a>
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'career'}" ng-click="workshop.filterShops('career')">
+        Career
+        </a>
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'culture'}" ng-click="workshop.filterShops('culture')">
+        Culture
+        </a>
+      </div>
+    </div>
+      <!-- content goes here -->
+        <div class="workshop__content-wrapper">
+            <div class="card" ng-repeat="workshop in workshop.currentEntries" ui-sref="main.workshopDetail({id: workshop.sys.id})">
+              <h3 class="card__heading">{{ workshop.fields.title }}</h3>
+              <div class="workshop__meta-info">
+                <h4 class="workshop__author">{{ workshop.fields.author }}</h4>
+                <p class="workshop__genre">
+                  <i ng-if="workshop.fields.genre === 'career'" class="ion-briefcase" aria-hidden="true"></i>
+                  <i ng-if="workshop.fields.genre === 'culture'" class="ion-earth" aria-hidden="true"></i>
+                  <i ng-if="workshop.fields.genre === 'activism'" class="ion-speakerphone" aria-hidden="true"></i>
+                  {{ workshop.fields.genre }}
+                </p>
+                <h5><i class="icon ion-ios-clock-outline workshop__icon-clock"></i>{{ workshop.fields.timeslot | timeParse }}</h5>
+              </div>
+        </div>
   </ion-content>
 </ion-view>

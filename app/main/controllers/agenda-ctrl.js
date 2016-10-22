@@ -14,6 +14,5 @@ angular.module('main')
     .then(function (response) {
       vm.friday = response.data.items[0].fields.friday;
       vm.saturday = response.data.items[0].fields.saturday;
-      console.log(vm.saturday)
     });
 });

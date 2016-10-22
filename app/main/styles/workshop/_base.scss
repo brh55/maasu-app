@@ -1,10 +1,6 @@
 // base of workshop
 
 .workshop {
-    &__content {
-        top: calc(44px + 48px);
-    }
-
     &__meta-info {
         text-transform: capitalize;
         font-size: 13px;
@@ -13,6 +9,30 @@
         span:not(:last-child) {
             margin-right: 4px;
         }
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    &__intro {
+        @extend .base__top-intro;
+
+        background-image: url('../assets/images/workshop-bg.jpg');
+        background-position: 0;
+        min-height: 150px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 15%;
+        opacity: 1;
     }
 
     &__time {
@@ -55,5 +75,28 @@
         height: 100%;
         border-radius: 50%;
         font-size: 40px;
+    }
+
+    .card__heading {
+        text-transform: none;
+        letter-spacing: 0.04em;
+    }
+
+    .card {
+        p {
+            margin: 4px 0;
+        }
+    }
+
+    .workshop__author {
+        color: #67677b;
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .tabs {
+        @extend .dark-shadow;
+        top: 0;
+        position: relative;
     }
 }

@@ -10,6 +10,5 @@ angular.module('main')
     .entries(searchParams)
     .then(function (response) {
       vm.list = response.data.items[0].fields.committeeList;
-      console.log(vm.list);
     });
 });

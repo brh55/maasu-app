@@ -1,21 +1,8 @@
-.map {
-    &__item {
-        position: relative;
-        box-sizing: border-box;
-    }
+/**
+ * Base file of Speakers
+ */
 
-    &__open-link {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-
-        &.item-content.activated {
-            background-color: rgba(224, 224, 224, 0.52);
-        }
-    }
-
+.speakers {
     &__intro {
         @extend .base__top-intro;
         @extend .dark-shadow;
@@ -33,6 +20,10 @@
         @extend .base__text-wrapper;
         bottom: 30%;
         opacity: 1;
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
     }
 
     h1 {

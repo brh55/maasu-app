@@ -1,0 +1,28 @@
+<ion-view view-title="Keynote Speakers">
+  <ion-content class="speakers">
+    <div class="speakers__intro">
+      <div class="speakers__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>Keynote Speakers</b><br>
+            </h1>
+            <p></p>
+        </div>
+      </div>
+    </div>
+    <ion-list>
+      <div class="speakers__content-wrapper">
+        <div class="card" ng-repeat="speaker in speakers.list">
+          <div class="committee__profile">
+            <img ng-src="{{ speakers.fields.image.fields.file.url }}" ng-alt="{{ member.fields.image.fields.speaker }}">
+            <div class="committee__profile-bio">
+              <h2 class="card__heading">{{ member.fields.name }}</h2>
+              <h3><i class="icon ion-person"></i> {{ member.fields.position }}</h3>
+              <p>{{ member.fields.description }}.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,7 +1,7 @@
 'use strict';
 angular.module('main')
 
-.controller('workshopDetailCtrl', function (contentful, $stateParams, TimeService) {
+.controller('WorkshopDetailCtrl', function (contentful, $stateParams, TimeService) {
   var searchParams = 'sys.id=' + $stateParams.id;
 
   var vm = this;

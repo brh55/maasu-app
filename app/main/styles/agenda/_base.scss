@@ -1,35 +1,36 @@
 // base for Agenda
 
 .agenda {
-    @for $length from 1 through 10 {
-        $bar-length: $length * 5px;
+    &__intro {
+        @extend .base__top-intro;
+        @extend .dark-shadow;
 
-        &__time-bar--#{$length} {
-            height: $bar-length;
-            width: 1px;
-            border-radius: 3px;
-            margin: 3px 0 3px 15px;
-            display: block;
-            background: $nu-purple;
-        }
+        background-image: url('../assets/images/agenda-bg.jpg');
+        min-height: 240px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 30%;
+        opacity: 1;
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
     }
 
     h2 {
         margin-left: -10px;
     }
 
-    .item {
-        h4 {
-            font-weight: 300;
-            letter-spacing: .09em;
-            font-size: 14px;
-        }
-
-        h5 {
-            font-weight: 500;
-            font-size: 11px;
-            letter-spacing: 2px;
-        }
+    h1 {
+        color: white;
+        margin-bottom: 5px;
     }
 
     .list {
@@ -37,34 +38,30 @@
         width: 90%
     }
 
+    .card__heading {
+        margin: 0;
+        letter-spacing: 1px;
+
+    }
+
     &__section--2 {
         margin-top: 25px;
     }
 
-    .item {
-        width: calc(100% - 17px);
-    }
+    &__item {
+        border-top: 0;
+        border-bottom: 1px solid #ececec;
+        padding: 16px 0;
 
-    &__number,
-    &__day {
-        display: block;
-    }
+        h3 {
+            display: inline;
+            font-weight: 400;
+            font-size: 16px;
+            color: #5a5a63;
+        }
 
-    &__day {
-        font-size: 17px;
-        color: $purple-grey;
-    }
-
-    &__number {
-        font-size: 45px;
-    }
-
-    &__date {
-        text-align: center;
-    }
-
-    &__divider {
-        background: $hover-purple;
-        color: $nu-purple;
+        &:last-child {
+            border-bottom: 0;
+        }
     }
 }

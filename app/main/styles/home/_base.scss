@@ -5,15 +5,14 @@
     }
 
     &__intro {
-        background: url('../assets/images/bg.jpg');
-        background-size: cover;
-        min-height: 350px;
-        position: relative;
+        @extend .base__top-intro;
+
+        background-image: url('../assets/images/bg.jpg');
     }
 
-    &__intro-overlay {
-        height: 100%;
-        position: absolute;
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
     }
 
     h1 {
@@ -27,10 +26,14 @@
     }
 
     .text-wrapper {
-        position: absolute;
-        width: 100%;
+        @extend .base__text-wrapper;
         bottom: 40px;
-        text-align: center;
+        color: white;
+    }
+
+    &__event-time {
+        font-size: 16px;
+        font-weight: 500;
     }
 
     &__image {
@@ -39,9 +42,22 @@
         display: block;
     }
 
-    &__card-wrapper {
-        margin-top: -60px;
-        z-index: 1;
-        position: relative;
+    &__social-icons {
+        padding: 10px 10%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            font-size: 30px;
+            color: $heading-purple;
+        }
+
+        a:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
     }
 }

@@ -9,43 +9,42 @@ angular.module('main')
   vm.friday = {};
   vm.saturday = {};
 
-  function getUpcoming (data) {
-    var currentMinutes = moment().hours() * 60 + moment().minutes();
-    _(data).map(function(data) {
-
-    });
-  }
-
   function createUnixTimeStamp (data) {
     var dateString = (data.length > 1) ? '2016-11-12 ' : '2016-11-11 ';
     var timeStamp = [];
-    _.forEach(data, function(confEvent) {
-       if (confEvent.startTime) {
-            var currentDateString = dateString + confEvent.startTime;
-            var timeFormat = (confEvent.startTime.includes('PM')) ?
-                'YYYY-MM-DD hh:mm A' :
-                'YYYY-MM-DD hh:mm a';
-            timeStamp.push(moment(currentDateString, timeFormat).unix());
-        }
+    _.forEach(data, function (confEvent) {
+      if (confEvent.startTime) {
+        var currentDateString = dateString + confEvent.startTime;
+        var timeFormat = (confEvent.startTime.includes('PM')) ?
+            'YYYY-MM-DD hh:mm A' :
+            'YYYY-MM-DD hh:mm a';
+        timeStamp.push(moment(currentDateString, timeFormat).unix());
+      }
     });
     return timeStamp;
   }
 
   function findUpcomingEventIndex (timeCollection) {
     var upcomingEvents = _
-                         .chain(timeCollection)
-                         .filter(function (timeStamp) {
+                          .chain(timeCollection)
+                          .filter(function (timeStamp) {
                             var currentUtc = moment().unix();
                             // return only times that are in the future
                             return (currentUtc < timeStamp);
-                         })
-                         .value();
+                          })
+                          .value();
     return timeCollection.indexOf(upcomingEvents[0]);
   }
 
   function getTimeDifference (greaterTime) {
-    return Math.round(Math.abs(greaterTime - moment().unix())/60);
+    return Math.round(Math.abs(greaterTime - moment().unix()) / 60);
   }
+
+  contentful
+    .entries('content_type=home&include=3')
+    .then(function (response) {
+      vm.overrideCards = (response.data.items.length > 0) ? response.data.items[0].fields.cards : [];
+    });
 
   contentful
     .entries(searchParams)
@@ -65,22 +64,22 @@ angular.module('main')
         .value();
 
       var currentIndex = '';
-      // not the best, but it provides a static fill depending on the day
-     if (moment().isAfter('2016-11-11', 'day')) {
+      // Not the best, but it provides a Static Fill depending on the day
+      if (moment().isAfter('2016-11-11', 'day')) {
         currentIndex = findUpcomingEventIndex(saturdayTimes);
         vm.upcomingEvent = saturdayEvents[currentIndex];
         vm.remainingTime = getTimeDifference(saturdayTimes[currentIndex]);
-     } else {
+      } else {
         currentIndex = findUpcomingEventIndex(fridayTimes);
         vm.upcomingEvent = fridayEvents[currentIndex];
         vm.remainingTime = getTimeDifference(fridayTimes[currentIndex]);
-     }
+      }
 
-     // Reduce the timer every minute
-     $interval(
+      // Update the timer every minute
+      $interval(
         function () {
           if (vm.remainingTime > 0) {
-            vm.remainingTime -= 1
+            vm.remainingTime -= 1;
           }
         }, 60000);
     });

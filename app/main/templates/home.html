@@ -1,6 +1,7 @@
 <ion-view view-title="Home" class="home">
   <ion-content>
     <div class="home__intro">
+      <div class="home__overlay">
         <div class="text-wrapper">
             <h1>
                 <b>MAASU</b><br>
@@ -9,16 +10,29 @@
             </h1>
             <p>November 12</p>
         </div>
+      </div>
     </div>
-  <div class="home__card-wrapper">
+  <div class="home__content-wrapper">
    <div class="card">
         <h4 class="card__heading">MAASU</h4>
         <p>The Midwest Asian American Students Union is an effort to unite Asian American groups across the Midwest, to voice the opinions of these groups in regards to pertinent issues, and to promote the varying cultures that comprise the Asian American community.</p>
+        <hr class="thin-line">
+        <div class="home__social-icons">
+          <a href="https://www.facebook.com/MAASUForChange/"><i class="icon ion-social-facebook"></i></a>
+          <a href="https://twitter.com/officialmaasu"><i class="icon ion-social-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/midwest-asian-american-students-union"><i class="icon ion-social-linkedin"></i></a>
+        </div>
     </div>
     <div class="card">
-        <h4 class="card__heading">{{home.upcomingEvent.fields.name}}</h4>
-        <h5>{{home.upcomingEvent.fields.startTime}} - {{home.upcomingEvent.fields.endTime}}</h5>
-        <i class="icon ion-android-stopwatch"></i> {{home.remainingTime}} minutes
+        <h4 class="card__heading"><i class="icon ion-calendar"></i> {{home.upcomingEvent.fields.name}}</h4>
+        <p><i class="icon ion-android-stopwatch"></i> <span class="home__event-time">{{home.upcomingEvent.fields.startTime}} - {{home.upcomingEvent.fields.endTime}}</span>
+        <br>Happening in {{home.remainingTime}} minutes</p>
+    </div>
+    <div ng-if="home.overrideCards.length > 0">
+      <div class="card" ng-repeat="card in home.overrideCards">
+        <h4 class="card__heading">{{card.fields.title}}</h4>
+        <p ng-bind-html="card.fields.cardInfo"></p>
+      </div>
     </div>
   </div>
   </ion-content>
