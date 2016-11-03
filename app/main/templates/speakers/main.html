@@ -12,13 +12,11 @@
     </div>
     <ion-list>
       <div class="speakers__content-wrapper">
-        <div class="card" ng-repeat="speaker in speakers.list">
+        <div class="card" ng-repeat="speaker in speakers.list" ng-click="speakers.loadSpeaker(speaker)">
           <div class="committee__profile">
-            <img ng-src="{{ speakers.fields.image.fields.file.url }}" ng-alt="{{ member.fields.image.fields.speaker }}">
+            <img ng-src="{{ speakers.fields.image.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
             <div class="committee__profile-bio">
-              <h2 class="card__heading">{{ member.fields.name }}</h2>
-              <h3><i class="icon ion-person"></i> {{ member.fields.position }}</h3>
-              <p>{{ member.fields.description }}.</p>
+              <h2 class="card__heading">{{ speaker.fields.name }}</h2>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ angular.module('main', [
   'ui.router',
   'contentful',
   'ionic-zoom-view',
+  'btford.markdown'
   // TODO: load other modules selected during generation
 ])
 .config(function ($stateProvider, $urlRouterProvider, contentfulProvider) {
@@ -119,6 +120,15 @@ angular.module('main', [
           'pageContent': {
             templateUrl: 'main/templates/speakers/main.html',
             controller: 'SpeakersCtrl as speakers'
+          }
+        }
+      })
+      .state('main.speakerDetails', {
+        url: '/speakers/detail',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/speakers/detail.html',
+            controller: 'SpeakerDetailCtrl as speaker'
           }
         }
       });

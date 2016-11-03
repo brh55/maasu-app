@@ -1,0 +1,43 @@
+// workshop details
+
+.workshop-details {
+    &__intro {
+        @extend .base__top-intro;
+
+        background-image: url('../assets/images/workshop-bg.jpg');
+        background-position: 0;
+        min-height: 220px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 25%;
+        opacity: 1;
+        padding: 0 25px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    &__author-wrapper {
+        .headshot,
+        .author {
+            float: left;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 0px;
+        padding-top: 5px;
+        font-size: 20px;
+        color: $nu-purple;
+    }
+}

@@ -36,7 +36,7 @@
     }
 
     &__time {
-        margin-bottom: 5px;
+        margin-bottom: -8px;
 
         .icon {
             margin-right: 10px;
@@ -50,7 +50,7 @@
 
     &__time-slot {
         color: $space-grey;
-        font-weight: 500;
+        font-weight: 300;
         font-size: 16px;
         display: block;
         padding: 10px 0;
