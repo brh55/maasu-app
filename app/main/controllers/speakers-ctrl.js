@@ -8,7 +8,7 @@ angular.module('main')
 
   vm.loadSpeaker = function (speakerData) {
     SpeakerService.set(speakerData);
-    $state.go('main.speakerDetails');
+    $state.go('main.speakerDetails', { id: speakerData.sys.id });
   }
 
   contentful

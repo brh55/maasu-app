@@ -3,24 +3,21 @@
     <div class="speakers__intro">
       <div class="speakers__overlay">
         <div class="text-wrapper">
-            <h1>
-                <b>Keynote Speakers</b><br>
-            </h1>
-            <p></p>
+          <h1>
+              <b>Keynote<br>Speakers</b>
+          </h1>
         </div>
       </div>
     </div>
-    <ion-list>
-      <div class="speakers__content-wrapper">
-        <div class="card" ng-repeat="speaker in speakers.list" ng-click="speakers.loadSpeaker(speaker)">
-          <div class="committee__profile">
-            <img ng-src="{{ speakers.fields.image.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
-            <div class="committee__profile-bio">
-              <h2 class="card__heading">{{ speaker.fields.name }}</h2>
-            </div>
+    <div class="speakers__content-wrapper">
+      <div class="card" ng-repeat="speaker in speakers.list" ng-click="speakers.loadSpeaker(speaker)">
+        <div class="committee__profile">
+          <img ng-src="{{ speaker.fields.headshot.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
+          <div class="committee__profile-bio">
+            <h2 class="card__heading">{{ speaker.fields.name }}</h2>
           </div>
         </div>
       </div>
-    </ion-list>
+    </div>
   </ion-content>
 </ion-view>

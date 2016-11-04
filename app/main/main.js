@@ -124,7 +124,7 @@ angular.module('main', [
         }
       })
       .state('main.speakerDetails', {
-        url: '/speakers/detail',
+        url: '/speakers/detail/:id',
         views: {
           'pageContent': {
             templateUrl: 'main/templates/speakers/detail.html',

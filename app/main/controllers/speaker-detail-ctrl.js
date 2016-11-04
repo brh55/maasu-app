@@ -1,7 +1,11 @@
 'use strict';
 angular.module('main')
-.controller('SpeakerDetailCtrl', function (contentful, SpeakerService, $stateParams, $state) {
+.controller('SpeakerDetailCtrl', function (contentful, SpeakerService, $state, $stateParams) {
   var vm = this;
-  vm.current = SpeakerService.get()
-  if (vm.current.length === 0) $state.go('main.speakers');
+  vm.current = SpeakerService.get();
+
+  // Just a dirty check
+  if (!$stateParams.id) {
+    $state.go('main.speakers');
+  }
 });
