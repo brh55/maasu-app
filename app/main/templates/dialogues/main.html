@@ -1,0 +1,29 @@
+<ion-view view-title="Dialogues">
+  <ion-content class="dialogues">
+    <div class="dialogues__intro">
+      <div class="dialogues__overlay">
+        <div class="text-wrapper">
+          <h1>
+              <b>Dialogues</b>
+          </h1>
+          <p>An open discussion regarding AA topics</p>
+        </div>
+      </div>
+    </div>
+    <div class="dialogues__content-wrapper">
+      <div class="card" ng-show="!dialogues.accept">
+        <h2 class="card__heading">
+          Read Before Posting
+        </h2>
+        <p>All posts must be responsible, appropriate, and courteous to fellow conference attendees. By posting, you agree to be held accountable.</p>
+        <button class="button button-balanced" ng-click="dialogues.acceptTerms()">I accept</button>
+      </div>
+    </div>
+
+    <div class="dialogues__topics" ng-show="!dialogues.accept">
+      <div class="card" ng-repeat="dialogue in dialogues.listing">
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

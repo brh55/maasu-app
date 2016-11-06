@@ -64,4 +64,14 @@
             border-bottom: 0;
         }
     }
+
+    &__location {
+        display: block;
+        clear: both;
+        margin-top: 4px;
+
+        p {
+            margin: 0;
+        }
+    }
 }

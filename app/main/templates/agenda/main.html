@@ -17,10 +17,15 @@
         <h4 class="card__heading">Friday, Nov <b>11</b></h4>
 
         <div ng-repeat="event in agenda.friday" class="agenda__item">
+          <div class="agenda__main">
           <h3>{{ event.fields.name }}</h3>
           <span class="item-note">
             {{ event.fields.startTime }} - {{ event.fields.endTime }}
           </span>
+          </div>
+          <div ng-if="event.fields.location" class="agenda__location">
+            <p><i class="icon ion-pin"></i> {{ event.fields.location }}</p>
+          </div>
         </div>
       </div>
 

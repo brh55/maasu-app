@@ -1,8 +1,9 @@
+// base dialogue file
 /**
  * Base file of Entertainment
  */
 
-.entertainment {
+.dialogues {
     &__intro {
         @extend .base__top-intro;
         @extend .dark-shadow;
@@ -43,21 +44,4 @@
         }
     }
 
-    &__profile {
-        @extend .committee__profile;
-
-        &-bio {
-            @extend .committee__profile-bio;
-        }
-
-        img {
-            padding-right: 8px
-        }
-    }
-
-    &__bio {
-        clear: both;
-        display: block;
-        margin-top: 10px;
-    }
 }

@@ -156,5 +156,14 @@ angular.module('main', [
             controller: 'EntertainmentCtrl as entertainment'
           }
         }
+      })
+      .state('main.dialogues', {
+        url: '/dialogues/',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/dialogues/main.html',
+            controller: 'DialoguesCtrl as dialogues'
+          }
+        }
       });
 });
