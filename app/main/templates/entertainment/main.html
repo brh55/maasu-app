@@ -1,0 +1,25 @@
+<ion-view view-title="Entertainment">
+  <ion-content class="entertainment">
+    <div class="entertainment__intro">
+      <div class="entertainment__overlay">
+        <div class="text-wrapper">
+          <h1>
+              <b>Entertainment</b>
+          </h1>
+          <p>To keep the vibes high</p>
+        </div>
+      </div>
+    </div>
+    <div class="entertainment__content-wrapper">
+      <div class="card" ng-repeat="speaker in entertainment.list" ng-click="entertainment.loadSpeaker(speaker)">
+<!--         <div class="committee__profile">
+          <img ng-src="{{ speaker.fields.headshot.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
+          <div class="committee__profile-bio">
+            <h2 class="card__heading">{{ speaker.fields.name }}</h2>
+            <p>{{ speaker.fields.title }}</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -21,7 +21,7 @@
 
     .item-icon-left {
         &.item-complex .item-content {
-            padding: 18px 18px 18px 65px;
+            padding: 16px 18px 16px 65px;
         }
 
         .icon-map {
@@ -51,6 +51,15 @@
         font-weight: bold;
         font-size: 20px;
         color: $nu-purple;
+        margin: 0;
+        line-height: 1;
+    }
+
+    &__lower-subtitle {
+        color: #a2a2a2;
+        margin: 1px 0;
+        margin-top: 4px;
+        line-height: 1;
     }
 
     &__divider-wrapper {

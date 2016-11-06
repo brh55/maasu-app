@@ -1,14 +1,14 @@
 /**
- * Base file of Sponsors
+ * Base file of Entertainment
  */
 
-.sponsors {
+.entertainment {
     &__intro {
         @extend .base__top-intro;
         @extend .dark-shadow;
 
-        background-image: url('../assets/images/sponsors-bg.jpg');
-        min-height: 230px;
+        background-image: url('../assets/images/entertainment-bg.jpg');
+        min-height: 240px;
     }
 
     &__overlay {
@@ -33,21 +33,5 @@
 
     .list {
         @extend .light-shadow;
-    }
-
-    &__org-list {
-        @extend p;
-
-        margin-left: 19px;
-        list-style-type: circle;
-    }
-
-    &__display {
-        margin-top: 30px;
-    }
-
-    img {
-        max-width: 100%;
-        margin: 14px 0;
     }
 }

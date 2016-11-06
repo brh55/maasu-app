@@ -147,5 +147,14 @@ angular.module('main', [
             templateUrl: 'main/templates/sponsors/main.html',
           }
         }
+      })
+      .state('main.entertainment', {
+        url: '/entertainment/',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/entertainment/main.html',
+            controller: 'EntertainmentCtrl as entertainment'
+          }
+        }
       });
 });
