@@ -1,4 +1,5 @@
 'use strict';
+
 angular.module('main')
 .controller('AgendaCtrl', function (contentful) {
   var searchParams = 'content_type=agenda&include=2';

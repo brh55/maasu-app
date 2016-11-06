@@ -1,0 +1,24 @@
+<ion-view view-title="Sponsors">
+  <ion-content class="sponsors">
+    <div class="sponsors__intro">
+      <div class="sponsors__overlay">
+        <div class="text-wrapper">
+          <h1>
+              <b>Sponsors</b>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="sponsors__content-wrapper">
+      <div class="card" ng-repeat="speaker in sponsors.list" ng-click="sponsors.loadSpeaker(speaker)">
+        <div class="committee__profile">
+          <img ng-src="{{ speaker.fields.headshot.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
+          <div class="committee__profile-bio">
+            <h2 class="card__heading">{{ speaker.fields.name }}</h2>
+            <p>{{ speaker.fields.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

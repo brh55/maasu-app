@@ -5,9 +5,17 @@ angular.module('main', [
   'ui.router',
   'contentful',
   'ionic-zoom-view',
-  'btford.markdown'
+  'btford.markdown',
+  'ionic.cloud'
   // TODO: load other modules selected during generation
 ])
+.config(function ($ionicCloudProvider) {
+  $ionicCloudProvider.init({
+    'core': {
+      'app_id': '64626b50'
+    }
+  });
+})
 .config(function ($stateProvider, $urlRouterProvider, contentfulProvider) {
   contentfulProvider.setOptions({
     space: 'fsxwgabotp2c',
@@ -129,6 +137,14 @@ angular.module('main', [
           'pageContent': {
             templateUrl: 'main/templates/speakers/detail.html',
             controller: 'SpeakerDetailCtrl as speaker'
+          }
+        }
+      })
+      .state('main.sponsors', {
+        url: '/sponsors/',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/sponsors/main.html',
           }
         }
       });

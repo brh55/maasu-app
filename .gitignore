@@ -2,6 +2,7 @@
 .DS_Store
 .tmp
 .sass-cache
+.swp
 
 # npm & bower
 /node_modules/
@@ -24,3 +25,4 @@
 # IDE
 *.sublime-project
 *.sublime-workspace
+!/app/bower_components/ionic.cloud.min.js

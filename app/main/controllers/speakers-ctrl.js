@@ -9,12 +9,12 @@ angular.module('main')
   vm.loadSpeaker = function (speakerData) {
     SpeakerService.set(speakerData);
     $state.go('main.speakerDetails', { id: speakerData.sys.id });
-  }
+  };
 
   contentful
     .entries(searchParams)
     .then(function (response) {
       vm.list = response.data.items;
-      console.log(vm.list)
+      console.log(vm.list);
     });
 });

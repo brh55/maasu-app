@@ -1,0 +1,37 @@
+/**
+ * Base file of Sponsors
+ */
+
+.sponsors {
+    &__intro {
+        @extend .base__top-intro;
+        @extend .dark-shadow;
+
+        background-image: url('../assets/images/map-bg.jpg');
+        min-height: 240px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 30%;
+        opacity: 1;
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .list {
+        @extend .light-shadow;
+    }
+}

@@ -1,4 +1,5 @@
 'use strict';
+/* global _, moment */
 angular.module('main')
 .controller('HomeCtrl', function (contentful, $interval) {
   var searchParams = 'content_type=agenda&include=2';
