@@ -6,7 +6,8 @@ angular.module('main', [
   'contentful',
   'ionic-zoom-view',
   'btford.markdown',
-  'ionic.cloud'
+  'ionic.cloud',
+  'firebase'
   // TODO: load other modules selected during generation
 ])
 .config(function ($ionicCloudProvider) {

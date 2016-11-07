@@ -10,19 +10,21 @@
         </div>
       </div>
     </div>
-    <div class="dialogues__content-wrapper">
-      <div class="card" ng-show="!dialogues.accept">
+    <div class="dialogues__content-wrapper" ng-cloak>
+      <div class="card" ng-cloak ng-show="!dialogues.accept">
         <h2 class="card__heading">
           Read Before Posting
         </h2>
         <p>All posts must be responsible, appropriate, and courteous to fellow conference attendees. By posting, you agree to be held accountable.</p>
         <button class="button button-balanced" ng-click="dialogues.acceptTerms()">I accept</button>
       </div>
-    </div>
 
-    <div class="dialogues__topics" ng-show="!dialogues.accept">
-      <div class="card" ng-repeat="dialogue in dialogues.listing">
+      <div class="card" ng-cloak ng-show="dialogues.accept && !dialogues.authenticate">
+        <p>Please authenticate with Facebook to get started:</p>
+        <button class="button button-positive" ng-click="dialogues.authenticate()"><i class="icon ion-social-facebook-outline"></i>  Facebook</button>
+      </div>
 
+      <div class="card" ng-cloak ng-show="dialogues.accept && dialogues.authenticate">
       </div>
     </div>
   </ion-content>
