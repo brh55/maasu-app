@@ -55,5 +55,23 @@
     "@ionic/cloud": "^0.14.0",
     "bluebird": "^3.4.6",
     "moment": "^2.15.1"
-  }
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-inappbrowser"
+  ],
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
+  ]
 }

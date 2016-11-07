@@ -1,7 +1,7 @@
 'use strict';
 /* global _, moment */
 angular.module('main')
-.controller('HomeCtrl', function (contentful, $interval) {
+.controller('HomeCtrl', function (contentful, $interval, $firebaseArray, $scope, FirebaseInit) {
   var searchParams = 'content_type=agenda&include=2';
 
   var vm = this;
@@ -77,11 +77,20 @@ angular.module('main')
       }
 
       // Update the timer every minute
-      $interval(
-        function () {
-          if (vm.remainingTime > 0) {
-            vm.remainingTime -= 1;
-          }
-        }, 60000);
+      var updateTime = $interval(
+                        function () {
+                          if (vm.remainingTime > 0) {
+                            vm.remainingTime -= 1;
+                          } else {
+                            vm.remainingTime = 'Now';
+                            $interval.cancel(updateTime);
+                          }
+                        }, 60000);
     });
+
+  var firebase = FirebaseInit;
+  var messagesRef = firebase.database().ref('messages'); // assume value here is { foo: "bar" }
+  var query = messagesRef.limitToLast(1);
+  var messages = $firebaseArray(query);
+  $scope.dialogues = messages;
 });

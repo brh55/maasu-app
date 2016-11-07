@@ -9,7 +9,8 @@
     "ionic": true,
     "localforage": true,
     "_": true,
-    "moment": true
+    "moment": true,
+    "firebase": true
   },
   "rules": {
     "no-console": 1

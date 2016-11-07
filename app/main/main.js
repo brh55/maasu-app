@@ -17,6 +17,7 @@ angular.module('main', [
     }
   });
 })
+.constant('FirebaseUrl', 'https://maasu-ls.firebaseio.com/')
 .config(function ($stateProvider, $urlRouterProvider, contentfulProvider) {
   contentfulProvider.setOptions({
     space: 'fsxwgabotp2c',

@@ -12,7 +12,7 @@
     <div class="speakers__content-wrapper">
       <div class="card" ng-repeat="speaker in speakers.list" ng-click="speakers.loadSpeaker(speaker)">
         <div class="committee__profile">
-          <img ng-src="{{ speaker.fields.headshot.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
+          <img ng-src="{{ 'https:' + speaker.fields.headshot.fields.file.url }}" ng-alt="{{ speaker.fields.image.fields.speaker }}">
           <div class="committee__profile-bio">
             <h2 class="card__heading">{{ speaker.fields.name }}</h2>
             <p>{{ speaker.fields.title }}</p>

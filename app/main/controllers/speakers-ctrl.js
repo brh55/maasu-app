@@ -15,6 +15,5 @@ angular.module('main')
     .entries(searchParams)
     .then(function (response) {
       vm.list = response.data.items;
-      console.log(vm.list);
     });
 });

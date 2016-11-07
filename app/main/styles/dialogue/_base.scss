@@ -44,4 +44,120 @@
         }
     }
 
+    &__textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #b2b2b2;
+        min-height: 102px;
+        line-height: 1.4;
+    }
+
+    &__title-field {
+        padding: 10px !important;
+        border: 1px solid #b2b2b2 !important;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__button-send {
+        display: block;
+        float: right;
+        min-height: 40px;
+        margin-top: 10px;
+        width: 30%;
+    }
+
+    &__chat-field {
+        clear: both;
+    }
+
+    &__user-photo {
+        border-radius: 100%;
+        margin-right: 15px;
+        max-height: 42px;
+    }
+
+    .user-name,
+    &__user-photo {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    &__profile {
+        margin-top: 9px;
+        width: 70%;
+        float: left;
+
+        h4 {
+            margin-top: 0;
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+    }
+
+    &__list {
+        .card {
+            padding: 10px 15px;
+        }
+    }
 }
+
+.dialogue {
+    &__message-photo,
+    &__message-text,
+    &__message-user {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__message-text {
+        color: #292929 !important;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        padding-top: 6px;
+    }
+
+    &__message-photo {
+        width: 38px;
+        height: 38px;
+        margin-right: 5px;
+        border-radius: 100%;
+    }
+
+    &__message {
+        border-bottom: 1px solid #d9d9d9;
+        margin-bottom: 11px;
+    }
+
+    &__message-field {
+        padding-bottom: 0;
+    }
+
+    &__message-user {
+        margin-top: 4px;
+
+        h4 {
+            margin: 0;
+            font-weight: bold;
+            margin: 0;
+            font-size: 14px;
+            color: #676767;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__characters-remaining {
+        display: inline-block;
+    }
+}
+
+

@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="ls.masu.project" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>MASU Leadership Summit 2016</name>
+  <name>MAASU Leadership Summit 2016</name>
   <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        The MAASU Leadership Summit Application at Northwestern
     </description>
-  <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+  <author email="BrandonHim@live.com" href="http://brandonhim.com">
+        Brandon Him
     </author>
   <content src="index.html"/>
   <plugin name="cordova-plugin-whitelist" spec="1"/>
   <plugin name="cordova-plugin-device" spec="~1.1.2"/>
   <plugin name="cordova-plugin-splashscreen" spec="~3.2.2"/>
+  <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0"/>
   <access origin="*"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>
+  <feature name="CDVWKWebViewEngine">
+    <param name="ios-package" value="CDVWKWebViewEngine"/>
+  </feature>
+  <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
@@ -79,6 +87,4 @@
   <engine name="ios" spec="~4.1.1"/>
   <engine name="android" spec="~5.1.1"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
-  <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="3000"/>
 </widget>

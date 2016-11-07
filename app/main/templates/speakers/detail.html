@@ -4,7 +4,7 @@
       <div class="speaker-details__overlay">
         <div class="text-wrapper">
             <h1>
-                <img class="base__image--circle headshot" ng-src="{{ speaker.current.fields.headshot.fields.file.url }}" alt="{{speaker.current.fields.headshot.fields.file.details}}">
+                <img class="base__image--circle headshot" ng-src="{{ 'https:' + speaker.current.fields.headshot.fields.file.url }}" alt="{{speaker.current.fields.headshot.fields.file.details}}">
                 <b>{{ speaker.current.fields.name }}</b><br>
             </h1>
         </div>

@@ -1,4 +1,4 @@
 'use strict';
 angular.module('main')
-.controller('MenuCtrl', function() {
+.controller('MenuCtrl', function () {
 });

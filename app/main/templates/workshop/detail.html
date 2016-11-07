@@ -21,7 +21,7 @@
                 <span class="workshop__time-slot">{{ workshop.detail.timeParse }}</span>
             </div>
             <div class="workshop-details__author-wrapper">
-                <img class="base__image--circle float-left headshot" ng-src="{{ workshop.detail.authorImage[0].fields.file.url }}" alt="">
+                <img class="base__image--circle float-left headshot" ng-src="{{ 'https://' + workshop.detail.authorImage[0].fields.file.url }}" alt="">
                 <h4 class="author">{{ workshop.detail.author }}</h4>
             </div>
             <p class="clear">{{ workshop.detail.description }}</p>

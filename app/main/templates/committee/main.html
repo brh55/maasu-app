@@ -14,7 +14,7 @@
     <div class="committee__content-wrapper">
       <div class="card" ng-repeat="member in committee.list">
         <div class="committee__profile">
-          <img ng-src="{{ member.fields.image.fields.file.url }}" ng-alt="{{ member.fields.image.fields.description }}">
+          <img ng-src="{{ 'https:' + member.fields.image.fields.file.url }}" ng-alt="{{ member.fields.image.fields.description }}">
           <div class="committee__profile-bio">
             <h2 class="card__heading">{{ member.fields.name }}</h2>
             <h3><i class="icon ion-person"></i> {{ member.fields.position }}</h3>
