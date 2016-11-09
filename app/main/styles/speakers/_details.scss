@@ -2,7 +2,7 @@
     &__intro {
         @extend .base__top-intro;
 
-        background-image: url('../assets/images/workshop-bg.jpg');
+        background-image: url('../assets/images/nucampus.jpg');
         background-position: 0;
         min-height: 220px;
     }
@@ -37,6 +37,7 @@
         width: 100px;
         display: block;
         margin: 0 auto;
+        margin-bottom: 4px;
     }
 
 }

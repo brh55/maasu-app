@@ -25,21 +25,22 @@
         </div>
 
         <div class="card" ng-if="error">
-          <p>Looks like there was an error, trying to authenticaticate. Let's retry again.</p>
+          <p>Looks like there was an error: {{ errorMessage }}.</p>
+          <p>Let's trying to authenticaticate again.</p>
           <button class="button button-positive" ng-click="dialogues.loginWithFacebook()"><i class="icon ion-social-facebook-outline"></i>  Facebook</button>
         </div>
 
-        <div class="card" class="ng-cloak" ng-if="accepted && !authenticated">
+        <div class="card" class="ng-cloak" ng-if="accepted && !authenticated" ng-class="{ slideDown: !authenticated && accepted }">
           <p>Please authenticate with Facebook to get started:</p>
           <button class="button button-positive" ng-click="dialogues.loginWithFacebook()"><i class="icon ion-social-facebook-outline"></i>  Facebook</button>
         </div>
 
-        <div ng-if="authenticated && accepted">
+        <div ng-if="authenticated && accepted" ng-class="{ slideDown: authenticated && accepted }">
           <div class="card chat-box">
             <div class="dialogues__chat-field">
-              <i class="ion-ios-chatbubble-outline"></i>
+              <i class="ion-ios-chatbubble-outline pulse"></i>
               <p class="dialogue__characters-remaining">{{charLeft}} Characters left</p>
-              <textarea class="dialogues__textarea" type="text" placeholder="Write your thoughts..." ng-model="dialogues.comment" maxlength="150"></textarea>
+              <textarea class="dialogues__textarea" type="text" placeholder="Write your thoughts..." min-length="3" ng-model="dialogues.comment" maxlength="150"></textarea>
               <div class="dialogues__profile">
                 <img class="dialogues__user-photo" ng-src="{{dialogues.user.photoURL}}">
                 <h4 class="user-name">{{dialogues.user.displayName}}</h4>
@@ -48,14 +49,13 @@
             </div>
           </div>
         </div>
-
         <div class="dialogues__list">
           <div class="card" ng-repeat="message in messages | orderBy:'-timeStamp'">
             <p class="dialogue__message-text">{{ ::message.text }}</p>
             <div class="dialogue__message-field">
               <img class="dialogue__message-photo" ng-src="{{ ::message.photoUrl }}">
               <div class="dialogue__message-user">
-                <h4>{{ ::message.name }}</h4>
+                <a ng-href="{{ message.facebookUrl }}" target="_blank"><h4>{{ ::message.name }}</h4></a>
                 <p>posted on {{ ::message.timeStamp | toDate }}</p>
               </div>
             </div>

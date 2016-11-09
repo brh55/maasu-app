@@ -76,6 +76,7 @@ gulp.task('watch', ['inject-all'], function () {
 var watchBuildDeps = [];
 if (options.build !== false) {
   watchBuildDeps.push('build');
+  watchBuildDeps.push('build-bower');
 }
 gulp.task('watch-build', watchBuildDeps, function () {
   bsInit(paths.dist);

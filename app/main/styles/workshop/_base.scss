@@ -11,6 +11,21 @@
         }
     }
 
+    .card {
+        p.workshop__genre {
+            margin-top: 0;
+            color: #949494;
+        }
+
+        .workshop__location {
+            color: #656565;
+            border-left: 3px solid #eca76b;
+            padding-left: 8px;
+            margin-top: 9px;
+            margin-left: 2px;
+        }
+    }
+
     h1 {
         color: white;
         margin-bottom: 5px;
@@ -88,15 +103,30 @@
         }
     }
 
-    .workshop__author {
-        color: #67677b;
+    &__author {
+        color: #353535;
         margin-bottom: 0;
         font-weight: 400;
         font-size: 15px;
+        margin-top: 0;
     }
+
     .tabs {
         @extend .dark-shadow;
         top: 0;
         position: relative;
+    }
+
+    &__genre {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+        color: #909090;
+        font-size: 13px;
+        margin-bottom: 1px;
+    }
+
+    .card__heading {
+        margin-bottom: 4px;
     }
 }

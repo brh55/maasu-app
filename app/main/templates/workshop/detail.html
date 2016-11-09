@@ -7,29 +7,23 @@
             <h1>
                 <b>{{ workshop.detail.title }}</b><br>
             </h1>
-            <p>
-                <span ng-repeat="tag in workshop.detail.genre">{{ tag }}</span>
-            </p>
         </div>
       </div>
     </div>
     <div class="workshop-details__content-wrapper">
         <div class="card">
             <h3 class="workshop-details__heading">{{ workshop.detail.title }}</h3>
-            <div class="row flex-vertical--center no-padding workshop__time">
-                <i class="icon ion-ios-clock-outline"></i>
-                <span class="workshop__time-slot">{{ workshop.detail.timeParse }}</span>
-            </div>
             <div class="workshop-details__author-wrapper">
-                <img class="base__image--circle float-left headshot" ng-src="{{ 'https://' + workshop.detail.authorImage[0].fields.file.url }}" alt="">
                 <h4 class="author">{{ workshop.detail.author }}</h4>
             </div>
-            <p class="clear">{{ workshop.detail.description }}</p>
+            <p class="clear" btf-markdown="workshop.detail.description"></p>
+            <p class="workshop-details__location">{{ workshop.detail.location }}</p>
         </div>
         <div class="card">
             <h4 class="content__author-name">{{ workshop.detail.author }}</h4>
+            <img ng-repeat="author in workshop.detail.authorImage" class="base__image--circle float-left headshot" ng-src="{{ 'https:' + author.fields.file.url }}" alt="">
             <p><b>About:</b></p>
-            <p class="content__author-desc">{{ workshop.detail.authorDesc }}</p>
+            <p class="content__author-desc"  btf-markdown="workshop.detail.authorDesc"></p>
         </div>
     </div>
   </ion-content>

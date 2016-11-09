@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ls.masu.project" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.maasu.lsproject" android-versionCode="018611" version="0.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>MAASU LS</name>
   <description>
         The MAASU Leadership Summit Application at Northwestern University
@@ -12,14 +12,27 @@
   <plugin name="cordova-plugin-device" spec="~1.1.2"/>
   <plugin name="cordova-plugin-splashscreen" spec="~3.2.2"/>
   <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0"/>
+  <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
+    <variable name="APP_ID" value="1247909431942955"/>
+    <variable name="APP_NAME" value="maasu-ls-app"/>
+  </plugin>
+  <plugin name="cordova-build-architecture" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" source="git"/>
+  <plugin name="cordova-plugin-crosswalk-webview" spec="~2.1.0">
+    <variable name="XWALK_VERSION" value="21+"/>
+    <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+"/>
+    <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect"/>
+    <variable name="XWALK_MODE" value="lite"/>
+    <variable name="XWALK_MULTIPLEAPK" value="true"/>
+  </plugin>
   <access origin="*"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>
+  <meta content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" http-equiv="Content-Security-Policy"/>
   <feature name="CDVWKWebViewEngine">
     <param name="ios-package" value="CDVWKWebViewEngine"/>
   </feature>
   <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="buildArchitecture" value="x86"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>

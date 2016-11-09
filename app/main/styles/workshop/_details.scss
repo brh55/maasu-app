@@ -14,6 +14,12 @@
         background: rgba(89, 79, 179, 0.52);
     }
 
+    h4.author {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
     .text-wrapper {
         @extend .base__text-wrapper;
         bottom: 25%;
@@ -23,15 +29,8 @@
 
     h1 {
         color: white;
-        font-size: 25px;
+        font-size: 24px;
         margin-bottom: 5px;
-    }
-
-    &__author-wrapper {
-        .headshot,
-        .author {
-            float: left;
-        }
     }
 
     &__heading {
@@ -39,5 +38,32 @@
         padding-top: 5px;
         font-size: 20px;
         color: $nu-purple;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    li {
+        list-style-type: circle
+    }
+
+    &__content-wrapper {
+        img {
+            width: 65px;
+            height: 65px;
+            margin-right: 14px;
+            margin-bottom: 7px;
+        }
+    }
+
+    &__location {
+        margin-bottom: 0;
+        text-align: right;
+        border-right: 4px solid #ffbc78;
+        padding-right: 5px;
+        color: #d8934c;
+        font-weight: 600;
+        letter-spacing: 0.03em;
     }
 }

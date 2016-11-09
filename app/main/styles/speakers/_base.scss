@@ -7,7 +7,7 @@
         @extend .base__top-intro;
         @extend .dark-shadow;
 
-        background-image: url('../assets/images/map-bg.jpg');
+        background-image: url('../assets/images/speaker-bg.jpg');
         min-height: 240px;
     }
 
@@ -20,6 +20,10 @@
         @extend .base__text-wrapper;
         bottom: 30%;
         opacity: 1;
+    }
+
+    .card__heading {
+        margin-bottom: 2px;
     }
 
     &__content-wrapper {

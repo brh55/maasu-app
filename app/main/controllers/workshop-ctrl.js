@@ -1,24 +1,32 @@
 'use strict';
 angular.module('main')
 
-.controller('WorkshopCtrl', function (contentful, $stateParams, TimeService) {
+.controller('WorkshopCtrl', function (contentful, $stateParams, TimeService, $scope) {
   var searchParams = 'content_type=workshops';
 
+  var filterList = {};
   function filterGenre (shopArray, genre) {
-    if (genre === 'all') {
-      return _(shopArray)
-              .sortBy(['unixStamp', 'fields.title'])
-              .value();
+    if (filterList[genre]) {
+      return filterList[genre];
+    }
 
+    if (genre === 'all') {
+      var allArray = _(shopArray)
+                      .sortBy(['fields.title'])
+                      .value();
+      filterList[genre] = allArray;
+      return allArray;
     } else {
       // Process seperately because sorting is different
-      return _(shopArray)
-              .chain()
-              .filter(function (workshop) {
-                return workshop.fields.genre === genre;
-              })
-              .sortBy(['unixStamp', 'fields.genre', 'fields.title'])
-              .value();
+      var filterArray =  _(shopArray)
+                          .chain()
+                          .filter(function (workshop) {
+                            return workshop.fields.genre === genre;
+                          })
+                          .sortBy(['fields.title'])
+                          .value();
+      filterList[genre] = filterArray;
+      return filterArray;
     }
   }
 
@@ -35,8 +43,10 @@ angular.module('main')
    * @return {void}       updates the model to filter view
    */
   vm.filterShops = function (genre) {
+    $scope.loading = true;
     vm.currentGenre = genre;
-    vm.currentEntries = filterGenre(vm.entries, vm.currentGenre);
+    $scope.currentEntries = filterGenre(vm.entries, vm.currentGenre);
+    $scope.loading = false;
   };
 
   vm.timeParse = function (timeString) {
@@ -53,6 +63,14 @@ angular.module('main')
     .then(function (response) {
       // add unix stamp for easy sorting
       vm.entries = _.map(response.data.items, appendUnixStamp);
-      vm.currentEntries = filterGenre(vm.entries, vm.currentGenre);
+      $scope.currentEntries = filterGenre(vm.entries, vm.currentGenre);
     });
+
+  $scope.$on('$ionicView.beforeEnter', function () {
+    $scope.loading = true;
+  });
+
+  $scope.$on('$ionicView.afterEnter', function () {
+    $scope.loading = false;
+  });
 });

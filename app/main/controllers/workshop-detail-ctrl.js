@@ -12,6 +12,5 @@ angular.module('main')
     .entries(searchParams)
     .then(function (response) {
       vm.detail = response.data.items[0].fields;
-      vm.detail.timeParse = moment('2016-11-12T12:00').format('hh:mm a');
     });
 });

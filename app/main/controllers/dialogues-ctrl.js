@@ -1,6 +1,6 @@
 'use strict';
 angular.module('main')
-.controller('DialoguesCtrl', function (AuthService, $state, $scope, $firebaseArray) {
+.controller('DialoguesCtrl', function (AuthService, $state, $scope, $firebaseArray, $ionicFacebookAuth, $cordovaFacebook) {
   var vm = this;
   $scope.authenticated = false;
   $scope.accepted = false;
@@ -11,22 +11,44 @@ angular.module('main')
 
   vm.loginWithFacebook = function loginWithFacebook () {
     $scope.loading = true;
-    var provider = new firebase.auth.FacebookAuthProvider();
-    AuthService.signInWithPopup(provider)
-      .then(function (authData) {
-        vm.user = authData.user;
-        $scope.error = false;
-        $scope.loading = true;
-        $scope.authenticated = true;
-        $state.reload();
-      })
-      .catch(function () {
-        $scope.loading = false;
-        $scope.error = true;
-      });
+    if (!ionic.Platform.isWebView()) {
+      var provider = new firebase.auth.FacebookAuthProvider();
+      AuthService.signInWithPopup(provider)
+        .then(function (authData) {
+          vm.user = authData.user;
+          $scope.error = false;
+          $scope.loading = true;
+          $scope.authenticated = true;
+          $state.reload();
+        })
+        .catch(function () {
+          $scope.loading = false;
+          $scope.error = true;
+        });
+    } else {
+      $cordovaFacebook.login(['public_profile', 'email'])
+        .then(function (success) {
+          var credential = firebase.auth.FacebookAuthProvider.credential(
+            success.authResponse.accessToken);
+          firebase.auth().signInWithCredential(credential)
+            .then(function (authData) {
+              vm.user = authData;
+              $scope.error = false;
+              $scope.loading = false;
+              $scope.authenticated = true;
+              $state.reload();
+            });
+        })
+        .catch(function (error) {
+          $scope.error = true;
+          $scope.errorMessage = error.message;
+          $scope.loading = false;
+          $scope.authenticated = true;
+        });
+    }
   };
 
-  var messagesRef = firebase.database().ref('messages'); // assume value here is { foo: "bar" }
+  var messagesRef = firebase.database().ref('messages');
   var query = messagesRef.limitToLast(34);
   var messages = $firebaseArray(query);
   $scope.messages = messages;
@@ -38,6 +60,7 @@ angular.module('main')
       name: vm.user.displayName,
       text: vm.comment,
       photoUrl: vm.user.photoURL,
+      facebookUrl: 'https://facebook.com/' + vm.user.providerData[0].uid,
       timeStamp: timestamp
     }).then(function () {
       vm.comment = '';

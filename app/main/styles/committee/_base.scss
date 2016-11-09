@@ -50,11 +50,12 @@
             display: block;
             height: 105px;
             border-radius: 4px;
-            padding-right: 10px;
+            width: 105px;
         }
 
         &-bio {
             width: 66%;
+            padding-left: 10px;
         }
     }
 
