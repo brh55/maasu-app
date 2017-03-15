@@ -11,7 +11,7 @@ angular.module('main')
   vm.saturday = {};
 
   function createUnixTimeStamp (data) {
-    var dateString = (data.length > 1) ? '2016-11-12 ' : '2016-11-11 ';
+    var dateString = '2016-11-12 ';
     var timeStamp = [];
     _.forEach(data, function (confEvent) {
       if (confEvent.startTime) {

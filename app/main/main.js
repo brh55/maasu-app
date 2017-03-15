@@ -51,7 +51,6 @@ angular.module('main', [
           }
         }
       })
-
       // COMMITTEE ROUTE
       .state('main.committee', {
         url: '/committee',
