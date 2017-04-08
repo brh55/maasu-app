@@ -2,7 +2,8 @@
 angular.module('main')
 .factory('FirebaseInit', function (firebase) {
   var config = {
-    apiKey: 'AIzaSyB7THADoKsIlLQhpgCBBW9i4zbCZkD-hZ4',
+    // free plan, but just for my sake
+    apiKey: '',
     authDomain: 'maasu-ls.firebaseapp.com',
     databaseURL: 'https://maasu-ls.firebaseio.com',
     storageBucket: 'maasu-ls.appspot.com',
