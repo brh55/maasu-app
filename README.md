@@ -1,16 +1,16 @@
-# MASU Leadership Summit 2016 Application
-Northwestern MASU Leadership Conference 2016 Application.
+# MASU Leadership Summit 2016 Ionic Application
+This application was used for MAASU Leadership Summit @ Northwestern University.
+
+Open-sourcing this repository as a reference for Angular.js / Ionic users. Unfortunately, I didn't completely unit test the code because of time constraints, but fortunately everything went pretty smooth when it went live. This project was also genereated by [Generator-M-Ionic v1.8.0](https://github.com/mwaylabs/generator-m-ionic).
+
+Feel free to download and use the app to test for yourself:
+- [Apple Store](https://itunes.apple.com/us/app/maasu-leadership-summit/id1174485929?mt=8)
+- [Google Play Store](https://play.google.com/store/apps/details?id=com.maasu.lsproject&hl=en)
+
+Enjoy! 
+
+![image](https://lh3.googleusercontent.com/-RHlZptd9iHIXD1CgbbhvpsSsR7b5h3X07s4tSWziS_0UER1YCW5oWusJWog4fuhLIU=h900-rw)
 
 
-This project was generated with Generator-M-Ionic v1.8.0. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
-
-[![Build Status](https://img.shields.io/travis/brh55/masu-app/master.svg?style=flat-square)][travis-url]
-[![Dependency Status](http://img.shields.io/david/brh55/masu-app/master.svg?style=flat-square)][daviddm-url]
-
-[travis-url]: https://travis-ci.org/brh55/masu-app
-[daviddm-url]: https://david-dm.org/brh55/masu-app
-
-Development:
-
-[![Dev Build Status](https://img.shields.io/travis/brh55/masu-app/dev.svg?style=flat-square)][travis-url]
-[![Dev Dependency Status](http://img.shields.io/david/brh55/masu-app/dev.svg?style=flat-square)](https://david-dm.org/brh55/masu-app/dev)
+## License
+MIT - 2017 Brandon Him 
