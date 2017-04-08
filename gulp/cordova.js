@@ -23,7 +23,7 @@ var runCordova = function (command, stream) {
 
 gulp.task('cordova', runCordova);
 gulp.task('cordova-only-resources', ['resources'], runCordova);
-gulp.task('cordova-with-build', ['build', 'resources'], runCordova);
+gulp.task('cordova-with-build', ['build', 'build-bower', 'resources'], runCordova);
 
 // Handle resources
 gulp.task('clean-res', function () {

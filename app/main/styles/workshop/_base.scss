@@ -1,0 +1,136 @@
+// base of workshop
+
+.workshop {
+    &__meta-info {
+        text-transform: capitalize;
+        font-size: 13px;
+        color: $space-grey;
+
+        span:not(:last-child) {
+            margin-right: 4px;
+        }
+    }
+
+    &__tabs {
+        top: 0 !important;
+    }
+
+    .card {
+        p.workshop__genre {
+            margin-top: 0;
+            color: #949494;
+        }
+
+        .workshop__location {
+            color: #656565;
+            border-left: 3px solid #eca76b;
+            padding-left: 8px;
+            margin-top: 9px;
+            margin-left: 2px;
+        }
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    &__intro {
+        @extend .base__top-intro;
+
+        background-image: url('../assets/images/workshop-bg.jpg');
+        background-position: 0;
+        min-height: 150px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 15%;
+        opacity: 1;
+    }
+
+    &__time {
+        margin-bottom: -8px;
+
+        .icon {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+    }
+
+    &__icon-clock {
+        margin-right: 5px;
+    }
+
+    &__time-slot {
+        color: $space-grey;
+        font-weight: 300;
+        font-size: 16px;
+        display: block;
+        padding: 10px 0;
+        letter-spacing: 1px;
+    }
+
+    &__time-dash {
+        height: 1px;
+        background: $inactive-grey;
+        flex-grow: 1;
+        margin-left: 20px;
+        border-radius: 4px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        max-width: 40px;
+        max-height: 40px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        font-size: 40px;
+    }
+
+    .card__heading {
+        text-transform: none;
+        letter-spacing: 0.04em;
+    }
+
+    .card {
+        p {
+            margin: 4px 0;
+        }
+    }
+
+    &__author {
+        color: #353535;
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 0;
+    }
+
+    .tabs {
+        @extend .dark-shadow;
+        top: 0;
+        position: relative;
+    }
+
+    &__genre {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+        color: #909090;
+        font-size: 13px;
+        margin-bottom: 1px;
+    }
+
+    .card__heading {
+        margin-bottom: 4px;
+    }
+}

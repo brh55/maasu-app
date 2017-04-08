@@ -1,0 +1,6 @@
+<ion-view view-title="{{ map.data.fields.title }}" >
+  <ion-content>
+    <!-- content goes here -->
+    <img ng-src="{{ 'https:' + map.data.fields.image.fields.file.url }}" ng-alt="{{ map.fields.image.fields.description }}" zoom-src="{{ 'https:' + map.data.fields.image.fields.file.url }}" zoom-view>
+  </ion-content>
+</ion-view>

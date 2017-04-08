@@ -1,0 +1,56 @@
+// Cards
+
+.card {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background .4s ease;
+
+    &__heading {
+        text-transform: uppercase;
+        color: $heading-purple;
+        font-size: 16px;
+        margin-top: 0;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #737373;
+    }
+
+    hr {
+        border-top: 1px solid #e0e0e0;
+        margin: 8px 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &[ui-sref] {
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgb(247, 247, 247);
+        }
+    }
+}
+
+.list {
+    h2 {
+        font-size: 16px;
+        margin-top: 0;
+        color: #737373;
+        font-weight: 500;
+    }
+
+    .item-icon-right {
+        color: #737373;
+    }
+
+    .item {
+        border-bottom: #ececec;
+    }
+}

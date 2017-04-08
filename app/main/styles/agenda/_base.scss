@@ -1,0 +1,87 @@
+// base for Agenda
+
+.agenda {
+    &__intro {
+        @extend .base__top-intro;
+        @extend .dark-shadow;
+
+        background-image: url('../assets/images/agenda-bg.jpg');
+        min-height: 240px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 30%;
+        opacity: 1;
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
+    }
+
+    h2 {
+        margin-left: -10px;
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .list {
+        margin-top: 10px;
+        width: 90%
+    }
+
+    .card__heading {
+        margin: 0;
+        letter-spacing: 1px;
+
+    }
+
+    &__section--2 {
+        margin-top: 25px;
+    }
+
+    &__item {
+        border-top: 0;
+        border-bottom: 1px solid #ececec;
+        padding: 16px 0;
+
+        h3 {
+            display: inline;
+            font-weight: 500;
+            font-size: 16px;
+            color: #545461;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .ion-pin {
+        margin-right: 4px;
+        font-size: 90%;
+        color: #938dc2;
+    }
+
+    &__location {
+        display: block;
+        clear: both;
+        margin-top: 4px;
+
+        p {
+            margin: 0;
+        }
+    }
+}

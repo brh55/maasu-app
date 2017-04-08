@@ -1,0 +1,24 @@
+<ion-view view-title="Maps">
+  <!-- do you want padding -->
+  <ion-content class="map">
+    <div class="map__intro">
+      <div class="map__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>Maps</b><br>
+            </h1>
+            <p>Because it helps to know where you are going</p>
+        </div>
+      </div>
+    </div>
+    <ion-list>
+      <div ng-repeat="map in maps.data" class="item item-icon-right map__item" >
+          <h2>{{ map.fields.title }}</h2>
+          <i class="icon ion-ios-arrow-right"></i>
+          <!-- hack to get zoom-view to work -->
+          <a class="map__open-link item-content" zoom-src="{{ 'https:' + map.fields.image.fields.file.url }}" zoom-view></a>
+      </span>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

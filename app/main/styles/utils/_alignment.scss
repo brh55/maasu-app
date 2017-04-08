@@ -1,0 +1,28 @@
+// alignment.scss
+
+.text-center {
+    text-align: center;
+}
+
+.center-block {
+    margin: 0 auto;
+    display: block;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.row-wrap {
+    row-wrap: wrap;
+}
+
+.flex {
+    &-vertical--center {
+        align-items: center;
+    }
+}
+
+.clear {
+    clear: both;
+}

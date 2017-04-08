@@ -1,0 +1,45 @@
+<!-- Main view of Agenda template -->
+<ion-view view-title="Agenda">
+  <ion-content class="agenda">
+    <div class="agenda__intro">
+      <div class="agenda__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>Agenda</b><br>
+            </h1>
+            <p>What's in store</p>
+        </div>
+      </div>
+    </div>
+    <div class="agenda__content-wrapper agenda__section--1">
+      <div class="card">
+        <!-- Start of Friday Agenda -->
+        <h4 class="card__heading">Friday, Nov <b>11</b></h4>
+
+        <div ng-repeat="event in agenda.friday" class="agenda__item">
+          <div class="agenda__main">
+          <h3>{{ event.fields.name }}</h3>
+          <span class="item-note">
+            {{ event.fields.startTime }} - {{ event.fields.endTime }}
+          </span>
+          </div>
+          <div ng-if="event.fields.location" class="agenda__location">
+            <p><i class="icon ion-pin"></i> {{ event.fields.location }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <!-- Start of Saturday Agenda -->
+        <h4 class="card__heading">Saturday, Nov <b>12</b></h4>
+
+        <div ng-repeat="event in agenda.saturday" class="agenda__item">
+          <h3>{{ event.fields.name }}</h3>
+          <span class="item-note">
+            {{ event.fields.startTime }}<span ng-if="event.fields.endTime"> - {{ event.fields.endTime }}</span>
+          </span>
+          <p><i class="icon ion-pin"></i> {{ event.fields.location }}</p>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

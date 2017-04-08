@@ -1,0 +1,47 @@
+<ion-view view-title="Workshops">
+  <ion-content class="workshop">
+    <div class="workshop__intro">
+      <div class="workshop__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>Workshops</b><br>
+            </h1>
+            <p>All about learning</p>
+        </div>
+      </div>
+    </div>
+    <div class="tabs-striped tabs-top tabs-background-royal tabs-color-light">
+      <div class="tabs workshop__tabs">
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'all'}" ng-click="workshop.filterShops('all')">
+        All
+        </a>
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'activism'}" ng-click="workshop.filterShops('activism')">
+        Activism
+        </a>
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'career'}" ng-click="workshop.filterShops('career')">
+        Career
+        </a>
+        <a class="tab-item" ng-class="{active: workshop.currentGenre === 'culture'}" ng-click="workshop.filterShops('culture')">
+        Culture
+        </a>
+      </div>
+    </div>
+    <!-- content goes here -->
+    <div class="workshop__content-wrapper">
+      <div ng-if="loading">
+        <div class="loader">Loading...</div>
+      </div>
+      <div ng-if="!loading">
+        <div class="card" ng-repeat="workshop in currentEntries" ui-sref="main.workshopDetail({id: workshop.sys.id})">
+          <p class="workshop__genre">
+            {{ workshop.fields.genre }}
+          </p>
+          <h3 class="card__heading">{{ workshop.fields.title }}</h3>
+          <div class="workshop__meta-info">
+            <h4 class="workshop__author">{{ workshop.fields.author }}</h4>
+            <p class="workshop__location">{{ workshop.fields.location }}</i></p>
+          </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

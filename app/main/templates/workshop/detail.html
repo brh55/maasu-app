@@ -1,0 +1,30 @@
+<ion-view view-title="Workshop Details">
+  <!-- do you want padding -->
+  <ion-content class="workshop-details">
+    <div class="workshop-details__intro">
+      <div class="workshop-details__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>{{ workshop.detail.title }}</b><br>
+            </h1>
+        </div>
+      </div>
+    </div>
+    <div class="workshop-details__content-wrapper">
+        <div class="card">
+            <h3 class="workshop-details__heading">{{ workshop.detail.title }}</h3>
+            <div class="workshop-details__author-wrapper">
+                <h4 class="author">{{ workshop.detail.author }}</h4>
+            </div>
+            <p class="clear" btf-markdown="workshop.detail.description"></p>
+            <p class="workshop-details__location">{{ workshop.detail.location }}</p>
+        </div>
+        <div class="card">
+            <h4 class="content__author-name">{{ workshop.detail.author }}</h4>
+            <img ng-repeat="author in workshop.detail.authorImage" class="base__image--circle float-left headshot" ng-src="{{ 'https:' + author.fields.file.url }}" alt="">
+            <p><b>About:</b></p>
+            <p class="content__author-desc"  btf-markdown="workshop.detail.authorDesc"></p>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

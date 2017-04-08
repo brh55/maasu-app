@@ -7,7 +7,11 @@
   "globals": {
     "angular": true,
     "ionic": true,
-    "localforage": true
+    "localforage": true,
+    "_": true,
+    "moment": true,
+    "firebase": true,
+    "CordovaFacebook": true
   },
   "rules": {
     "no-console": 1

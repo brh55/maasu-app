@@ -1,0 +1,22 @@
+<ion-view view-title="{{speaker.current.fields.name}}">
+  <ion-content class="speaker-details">
+    <div class="speaker-details__intro">
+      <div class="speaker-details__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <img class="base__image--circle headshot" ng-src="{{ 'https:' + speaker.current.fields.headshot.fields.file.url }}" alt="{{speaker.current.fields.headshot.fields.file.details}}">
+                <b>{{ speaker.current.fields.name }}</b><br>
+            </h1>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-details__content-wrapper">
+        <div class="card">
+            <h3 class="speaker-details__heading">{{ speaker.detail.title }}</h3>
+            <div class="speaker-details__author-wrapper">
+                <h4 class="author">{{ speaker.current.fields.author }}</h4>
+            </div>
+            <p class="clear" btf-markdown="speaker.current.fields.description"></p>
+        </div>
+  </ion-content>
+</ion-view>

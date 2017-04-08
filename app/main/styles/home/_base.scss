@@ -1,0 +1,63 @@
+// Home.scss
+.home {
+    &__tiles {
+        color: #fff;
+    }
+
+    &__intro {
+        @extend .base__top-intro;
+
+        background-image: url('../assets/images/bg.jpg');
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    h1 {
+        color: white;
+        font-size: 60px;
+        line-height: 1;
+        font-weight: 100;
+        padding: 25px;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 40px;
+        color: white;
+    }
+
+    &__event-time {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__image {
+        width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
+
+    &__social-icons {
+        padding: 10px 10%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            font-size: 30px;
+            color: $heading-purple;
+        }
+
+        a:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
+    }
+}

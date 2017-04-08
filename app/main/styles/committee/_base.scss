@@ -1,0 +1,78 @@
+// _base.scss
+
+.committee {
+    h1 {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-bottom: 1px;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+    }
+
+    &__profile-image {
+        @extend .base__image--circle;
+        max-width: 150px;
+        display: block;
+        margin: 15px auto;
+        padding-right: 10px;
+    }
+
+    &__intro {
+        @extend .base__top-intro;
+        background-image: url('../assets/images/committee-bg.jpg');
+        min-height: 240px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 30%;
+        opacity: 1;
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
+    }
+
+    &__profile {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            display: block;
+            height: 105px;
+            border-radius: 4px;
+            width: 105px;
+        }
+
+        &-bio {
+            width: 66%;
+            padding-left: 10px;
+        }
+    }
+
+    .card {
+        padding: 15px;
+
+        h3 {
+            margin: 0;
+            color: #737373;
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding: 4px 0 6px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+}

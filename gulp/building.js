@@ -13,7 +13,8 @@ var buildDependencies = [
   options['force-build'] ? 'linting' : 'linting-throw',
   'build-app',
   'build-templates',
-  'build-assets'
+  'build-assets',
+  'build-bower'
 ];
 
 gulp.task('build', buildDependencies, function () {
@@ -74,3 +75,8 @@ gulp.task('build-assets', ['clean', 'bower-fonts'], function () {
     .pipe($.if(options.minify, $.imagemin()))
     .pipe(gulp.dest(paths.dist));
 });
+
+gulp.task('build-bower', function () {
+  return gulp.src('app/bower_components/ionic.cloud.min.js')
+    .pipe(gulp.dest(paths.dist + '/bower_components/'));
+})

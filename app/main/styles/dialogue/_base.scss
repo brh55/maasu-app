@@ -1,0 +1,168 @@
+// base dialogue file
+/**
+ * Base file of Entertainment
+ */
+
+.dialogues {
+    &__intro {
+        @extend .base__top-intro;
+        @extend .dark-shadow;
+
+        background-image: url('../assets/images/entertainment-bg.jpg');
+        min-height: 240px;
+    }
+
+    &__overlay {
+        @extend .base__top-intro--overlay;
+        background: rgba(89, 79, 179, 0.52);
+    }
+
+    .text-wrapper {
+        @extend .base__text-wrapper;
+        bottom: 30%;
+        opacity: 1;
+    }
+
+    &__content-wrapper {
+        @extend .base__content-wrapper;
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .list {
+        @extend .light-shadow;
+    }
+
+    &__social-list {
+        font-size: 20px;
+
+        .icon {
+            margin-right: 4px;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #b2b2b2;
+        min-height: 102px;
+        line-height: 1.4;
+    }
+
+    &__title-field {
+        padding: 10px !important;
+        border: 1px solid #b2b2b2 !important;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__button-send {
+        display: block;
+        float: right;
+        min-height: 40px;
+        margin-top: 10px;
+        width: 30%;
+    }
+
+    &__chat-field {
+        clear: both;
+    }
+
+    &__user-photo {
+        border-radius: 100%;
+        margin-right: 15px;
+        max-height: 42px;
+    }
+
+    .user-name,
+    &__user-photo {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    &__profile {
+        margin-top: 9px;
+        width: 70%;
+        float: left;
+
+        h4 {
+            margin-top: 0;
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+    }
+
+    &__list {
+        .card {
+            padding: 10px 15px;
+        }
+    }
+}
+
+.dialogues__list {
+    .dialogue__message-text {
+        padding-top: 6px;
+    }
+}
+
+.dialogue {
+    &__message-photo,
+    &__message-text,
+    &__message-user {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__message-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+        letter-spacing: 0.03em;
+    }
+
+    &__message-photo {
+        width: 38px;
+        height: 38px;
+        margin-right: 5px;
+        border-radius: 100%;
+    }
+
+    &__message {
+        border-bottom: 1px solid #d9d9d9;
+        margin-bottom: 11px;
+    }
+
+    &__message-field {
+        padding-bottom: 0;
+    }
+
+    &__message-user {
+        margin-top: 4px;
+
+        h4 {
+            margin: 0;
+            font-weight: bold;
+            margin: 0;
+            font-size: 14px;
+            color: #676767;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__characters-remaining {
+        display: inline-block;
+    }
+}
+
+

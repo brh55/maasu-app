@@ -9,25 +9,27 @@
     <meta name="format-detection" content="telephone=no"> <!-- no auto telephone linking -->
 
     <meta name="apple-mobile-web-app-capable" content="yes"> <!-- can be saved to home screen on ios -->
-    <title>MASU Leadership Summit 2016</title>
+    <title>MAASU Leadership Summit 2016</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css main/styles/app.css -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="main/styles/main.css">
+    <link rel="stylesheet" href="main/styles/index.css">
     <!-- endinject -->
     <!-- endbuild -->
+    <style> .ng-cloak { display: none !important; } </style>
   </head>
-  <body ng-app="masuLeadershipSummit2016">
+  <body ng-app="masuApp">
 
     <!-- the nav bar will be updated as we navigate between views -->
     <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-stable">
+    <ion-nav-bar class="bar-transparent">
       <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     <!-- the current view will be rendered in the <ion-nav-view> directive -->
@@ -49,18 +51,52 @@
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
     <script src="bower_components/localforage/dist/localforage.js"></script>
+    <script src="bower_components/angular-contentful/dist/angular-contentful.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/ionic-zoom-view/dist/ionic-zoom-view.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/showdown/src/showdown.js"></script>
+    <script src="bower_components/angular-markdown-directive/markdown.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="bower_components/ionic.cloud.min.js"></script>
 
     <!-- build:js scripts/app.js -->
     <!-- inject:js -->
     <script src="main/main.js"></script>
+    <script src="main/services/time-service.js"></script>
+    <script src="main/services/speaker-service.js"></script>
+    <script src="main/services/maps-service.js"></script>
     <script src="main/services/main-serv.js"></script>
+    <script src="main/services/auth-service.js"></script>
+    <script src="main/filters/timeparse-filter.js"></script>
+    <script src="main/controllers/workshop-detail-ctrl.js"></script>
+    <script src="main/controllers/workshop-ctrl.js"></script>
+    <script src="main/controllers/speakers-ctrl.js"></script>
+    <script src="main/controllers/speaker-detail-ctrl.js"></script>
     <script src="main/controllers/menu-ctrl.js"></script>
+    <script src="main/controllers/maps-detail-ctrl.js"></script>
+    <script src="main/controllers/maps-ctrl.js"></script>
+    <script src="main/controllers/home-ctrl.js"></script>
+    <script src="main/controllers/entertainment-ctrl.js"></script>
+    <script src="main/controllers/dialogues-ctrl.js"></script>
     <script src="main/controllers/debug-ctrl.js"></script>
+    <script src="main/controllers/committee-ctrl.js"></script>
+    <script src="main/controllers/agenda-ctrl.js"></script>
+    <script src="main/controllers/about-ctrl.js"></script>
     <script src="main/constants/config-const.js"></script>
     <script src="app.js"></script>
     <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>
+-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>
+-- endinject -->
     <!-- endbuild -->
   </body>
 </html>

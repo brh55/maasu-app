@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "maasu-ls",
+    "staging": "maasu-ls"
+  }
+}

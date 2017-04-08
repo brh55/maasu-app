@@ -5,7 +5,7 @@
 
     <!-- header bar -->
     <!-- the nav bar will be updated as we navigate between views -->
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-white">
       <!-- back button, shown if applicable -->
       <ion-nav-back-button>
       </ion-nav-back-button>
@@ -22,23 +22,77 @@
   </ion-side-menu-content>
 
   <!-- SIDEMENU -->
-  <ion-side-menu side="left">
+  <ion-side-menu class="menu" side="left">
 
     <!-- menu header -->
-    <ion-header-bar class="bar-positive">
-      <h1 class="title">Nav</h1>
+    <ion-header-bar class="item-icon-left">
+      <a menu-close>
+        <i class="menu__close-btn icon ion-ios-close-empty"></i>
+      </a>
     </ion-header-bar>
 
     <!-- menu content -->
-    <ion-content>
+    <ion-content class="menu__base">
+
+      <div class="menu__title text-center">
+        <h2>MAASU</h2>
+        <p class="menu__subtitle">Northwestern</p>
+        <p class="menu__lower-subtitle">Leadership Summit 2016</p>
+      </div>
+
       <ion-list>
-        <ion-item menu-close ui-sref="main.list">
-          List
+
+        <ion-item class="item-icon-left" menu-close ui-sref="main.home">
+          <i class="icon ion-ios-home-outline"></i>
+          Home
         </ion-item>
-        <ion-item menu-close ui-sref="main.debug">
-          Debug
+        <ion-item class="item-icon-left" menu-close ui-sref="main.committee">
+          <i class="icon ion-ios-people-outline"></i>
+          Committee
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.agenda">
+          <i class="icon ion-ios-time-outline"></i>
+          Agenda
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.workshop">
+          <i class="icon ion-ios-lightbulb-outline"></i>
+          Workshops
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.maps">
+          <i class="icon ion-map"></i>
+          Maps
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.speakers">
+          <i class="icon ion-ios-mic-outline"></i>
+          Keynote Speakers
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.entertainment">
+          <i class="icon ion-happy-outline"></i>
+          Entertainment
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.dialogues">
+          <i class="icon ion-ios-chatboxes-outline"></i>
+          Dialogues
+        </ion-item>
+        <ion-item class="item-icon-left" menu-close ui-sref="main.sponsors">
+          <i class="icon ion-ios-color-wand-outline"></i>
+          Sponsors
         </ion-item>
       </ion-list>
+
+      <div class="menu__divider-wrapper">
+        <div class="menu__divider"></div>
+      </div>
+
+      <div class="social-links">
+        <a href="http://facebook.com">
+          <i class="icon ion-social-facebook-outline"></i>
+        </a>
+        <a href="http://maasu.org/">
+          <i class="icon ion-ios-world-outline"></i>
+        </a>
+      </div>
+
     </ion-content>
 
   </ion-side-menu>

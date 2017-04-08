@@ -1,0 +1,27 @@
+<ion-view view-title="Committee">
+  <!-- do you want padding -->
+  <ion-content class="committee">
+    <div class="committee__intro">
+      <div class="committee__overlay">
+        <div class="text-wrapper">
+            <h1>
+                <b>Committee</b><br>
+            </h1>
+            <p>The team behind the summit</p>
+        </div>
+      </div>
+    </div>
+    <div class="committee__content-wrapper">
+      <div class="card" ng-repeat="member in committee.list">
+        <div class="committee__profile">
+          <img ng-src="{{ 'https:' + member.fields.image.fields.file.url }}" ng-alt="{{ member.fields.image.fields.description }}">
+          <div class="committee__profile-bio">
+            <h2 class="card__heading">{{ member.fields.name }}</h2>
+            <h3><i class="icon ion-person"></i> {{ member.fields.position }}</h3>
+            <p>{{ member.fields.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
