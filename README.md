@@ -1,4 +1,4 @@
-# MASU Leadership Summit 2016 Ionic Application
+# MAASU Leadership Summit 2016 Ionic Application
 This application was used for MAASU Leadership Summit @ Northwestern University.
 
 Open-sourcing this repository as a reference for Angular.js / Ionic users. Unfortunately, I didn't completely unit test the code because of time constraints, but fortunately everything went pretty smooth when it went live. This project was also genereated by [Generator-M-Ionic v1.8.0](https://github.com/mwaylabs/generator-m-ionic).
