@@ -1,5 +1,6 @@
 # MAASU Leadership Summit 2016 Ionic Application
-This application was used for MAASU Leadership Summit @ Northwestern University
+
+> A open-source Ionic application used MAASU Leadership Summit @ Northwestern University
 
 ![image](https://lh3.googleusercontent.com/-RHlZptd9iHIXD1CgbbhvpsSsR7b5h3X07s4tSWziS_0UER1YCW5oWusJWog4fuhLIU=h900-rw)
 
